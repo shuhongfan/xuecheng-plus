@@ -1,0 +1,42 @@
+2023-01-18 16:58:20,073 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 16:58:20,073 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 16:58:20,082 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 16:58:20,082 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 16:58:20,166 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-01-18 16:58:20,166 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-01-18 16:58:20,234 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 16:58:20,234 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 16:58:20,364 INFO [main][GenericScope.java:295] - BeanFactory id=f4b5ea25-96de-3d66-be7d-f0265430c77f
+2023-01-18 16:58:20,364 INFO [main][GenericScope.java:295] - BeanFactory id=f4b5ea25-96de-3d66-be7d-f0265430c77f
+2023-01-18 16:58:20,679 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 16:58:20,679 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 16:58:20,826 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1480 ms
+2023-01-18 16:58:20,826 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1480 ms
+2023-01-18 16:58:21,694 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 16:58:21,694 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 16:58:22,069 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 16:58:22,069 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 16:58:23,561 INFO [main][UserDetailsServiceAutoConfiguration.java:86] - 
+
+Using generated security password: 73a28a51-8749-4960-be0f-0762565117e0
+
+2023-01-18 16:58:23,561 INFO [main][UserDetailsServiceAutoConfiguration.java:86] - 
+
+Using generated security password: 73a28a51-8749-4960-be0f-0762565117e0
+
+2023-01-18 16:58:23,634 INFO [main][DefaultSecurityFilterChain.java:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@664f49f, org.springframework.security.web.context.SecurityContextPersistenceFilter@ab2009f, org.springframework.security.web.header.HeaderWriterFilter@1f6f0fe2, org.springframework.security.web.csrf.CsrfFilter@4e10a320, org.springframework.security.web.authentication.logout.LogoutFilter@f5ae29e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fa8297b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@53e4a19e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@60ab895f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57b33c29, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e4d8770, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cdb5974, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@295f2d1b, org.springframework.security.web.session.SessionManagementFilter@4d8f2cfd, org.springframework.security.web.access.ExceptionTranslationFilter@66e12c3b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@af9dd34]
+2023-01-18 16:58:23,634 INFO [main][DefaultSecurityFilterChain.java:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@664f49f, org.springframework.security.web.context.SecurityContextPersistenceFilter@ab2009f, org.springframework.security.web.header.HeaderWriterFilter@1f6f0fe2, org.springframework.security.web.csrf.CsrfFilter@4e10a320, org.springframework.security.web.authentication.logout.LogoutFilter@f5ae29e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fa8297b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@53e4a19e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@60ab895f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57b33c29, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e4d8770, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cdb5974, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@295f2d1b, org.springframework.security.web.session.SessionManagementFilter@4d8f2cfd, org.springframework.security.web.access.ExceptionTranslationFilter@66e12c3b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@af9dd34]
+2023-01-18 16:58:23,745 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 16:58:23,745 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 16:58:24,330 WARN [main][SpringCloudSecurityAutoConfiguration.java:38] - All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-01-18 16:58:24,330 WARN [main][SpringCloudSecurityAutoConfiguration.java:38] - All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-01-18 16:58:24,333 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 16:58:24,333 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 16:58:24,601 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 16:58:24,601 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 16:58:25,467 INFO [RMI TCP Connection(6)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 16:58:25,467 INFO [RMI TCP Connection(6)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 16:58:25,474 INFO [RMI TCP Connection(6)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 5 ms
+2023-01-18 16:58:25,474 INFO [RMI TCP Connection(6)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 5 ms
+2023-01-18 16:59:10,496 WARN [http-nio-63040-exec-1][AbstractHandlerExceptionResolver.java:199] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-01-18 16:59:10,496 WARN [http-nio-63040-exec-1][AbstractHandlerExceptionResolver.java:199] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]

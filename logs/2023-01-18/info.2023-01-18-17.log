@@ -1,0 +1,102 @@
+2023-01-18 17:09:51,804 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:09:51,804 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:09:59,449 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-18 17:09:59,449 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-18 17:09:59,451 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:09:59,451 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:10:08,652 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 17:10:08,652 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 17:10:08,655 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 17:10:08,655 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 17:10:08,680 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-01-18 17:10:08,680 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-01-18 17:10:08,795 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 17:10:08,795 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 17:10:08,917 INFO [main][GenericScope.java:295] - BeanFactory id=5cb1efba-e99d-3dfe-9d26-4f678c56b801
+2023-01-18 17:10:08,917 INFO [main][GenericScope.java:295] - BeanFactory id=5cb1efba-e99d-3dfe-9d26-4f678c56b801
+2023-01-18 17:10:09,272 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 17:10:09,272 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 17:10:09,429 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1390 ms
+2023-01-18 17:10:09,429 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1390 ms
+2023-01-18 17:10:10,366 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:10:10,366 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:10:10,800 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:10:10,800 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:10:12,351 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 17:10:12,351 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 17:10:12,907 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 17:10:12,907 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 17:10:13,136 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 17:10:13,136 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 17:10:14,025 INFO [RMI TCP Connection(8)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 17:10:14,025 INFO [RMI TCP Connection(8)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 17:10:14,031 INFO [RMI TCP Connection(8)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 6 ms
+2023-01-18 17:10:14,031 INFO [RMI TCP Connection(8)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 6 ms
+2023-01-18 17:22:16,560 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:22:16,560 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:22:25,672 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-18 17:22:25,672 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-18 17:22:25,673 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:22:25,673 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:22:31,337 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 17:22:31,337 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 17:22:31,341 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 17:22:31,341 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 17:22:31,366 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2023-01-18 17:22:31,366 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2023-01-18 17:22:31,417 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 17:22:31,417 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 17:22:31,537 INFO [main][GenericScope.java:295] - BeanFactory id=5cb1efba-e99d-3dfe-9d26-4f678c56b801
+2023-01-18 17:22:31,537 INFO [main][GenericScope.java:295] - BeanFactory id=5cb1efba-e99d-3dfe-9d26-4f678c56b801
+2023-01-18 17:22:31,852 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 17:22:31,852 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 17:22:31,991 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1319 ms
+2023-01-18 17:22:31,991 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1319 ms
+2023-01-18 17:22:32,886 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:22:32,886 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:22:33,235 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:22:33,235 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:22:34,845 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 17:22:34,845 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 17:22:35,438 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 17:22:35,438 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 17:22:35,701 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 17:22:35,701 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 17:22:36,680 INFO [RMI TCP Connection(5)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 17:22:36,680 INFO [RMI TCP Connection(5)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 17:22:36,688 INFO [RMI TCP Connection(5)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 8 ms
+2023-01-18 17:22:36,688 INFO [RMI TCP Connection(5)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 8 ms
+2023-01-18 17:56:15,667 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:56:15,667 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:56:24,486 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-18 17:56:24,486 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-18 17:56:24,487 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:56:24,487 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:56:31,583 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 17:56:31,583 INFO [main][RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-18 17:56:31,587 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 17:56:31,587 INFO [main][RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-18 17:56:31,613 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-01-18 17:56:31,613 INFO [main][RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-01-18 17:56:31,667 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 17:56:31,667 WARN [main][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-18 17:56:31,784 INFO [main][GenericScope.java:295] - BeanFactory id=5cb1efba-e99d-3dfe-9d26-4f678c56b801
+2023-01-18 17:56:31,784 INFO [main][GenericScope.java:295] - BeanFactory id=5cb1efba-e99d-3dfe-9d26-4f678c56b801
+2023-01-18 17:56:32,089 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 17:56:32,089 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 63040 (http)
+2023-01-18 17:56:32,223 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1335 ms
+2023-01-18 17:56:32,223 INFO [main][ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 1335 ms
+2023-01-18 17:56:33,042 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:56:33,042 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-18 17:56:33,384 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:56:33,384 INFO [main][ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-18 17:56:34,823 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 17:56:34,823 WARN [main][FreeMarkerAutoConfiguration.java:65] - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-01-18 17:56:35,394 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 17:56:35,394 INFO [main][EndpointLinksResolver.java:58] - Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-01-18 17:56:35,646 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 17:56:35,646 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 63040 (http) with context path '/content'
+2023-01-18 17:56:36,415 INFO [RMI TCP Connection(4)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 17:56:36,415 INFO [RMI TCP Connection(4)-192.168.1.8][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-01-18 17:56:36,423 INFO [RMI TCP Connection(4)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 8 ms
+2023-01-18 17:56:36,423 INFO [RMI TCP Connection(4)-192.168.1.8][FrameworkServlet.java:547] - Completed initialization in 8 ms

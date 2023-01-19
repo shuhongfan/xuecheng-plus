@@ -10,6 +10,10 @@
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/xuecheng-plus-content-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/xuecheng-plus-content-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-generator/xuecheng-plus-generator.iml" filepath="$PROJECT_DIR$/xuecheng-plus-generator/xuecheng-plus-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-parent/xuecheng-plus-parent.iml" filepath="$PROJECT_DIR$/xuecheng-plus-parent/xuecheng-plus-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/xuecheng-plus-system-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/xuecheng-plus-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-model/xuecheng-plus-system-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-model/xuecheng-plus-system-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-service/xuecheng-plus-system-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-service/xuecheng-plus-system-service.iml" />
     </modules>
   </component>
 </project>
