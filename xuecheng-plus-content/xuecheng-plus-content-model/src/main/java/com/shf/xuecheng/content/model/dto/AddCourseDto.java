@@ -21,6 +21,10 @@ import javax.validation.constraints.Size;
 public class AddCourseDto {
 
 
+ /**
+  * JSR303 校验
+  * groups 设置校验组
+  */
  @NotEmpty(message = "添加课程名称不能为空",groups={ValidationGroups.Inster.class})
  @NotEmpty(message = "修改课程名称不能为空",groups={ValidationGroups.Update.class})
  @ApiModelProperty(value = "课程名称", required = true)

@@ -19,7 +19,7 @@ import java.util.List;
  * @version 1.0
  */
 @Slf4j
- @ControllerAdvice//控制器增强
+@ControllerAdvice//控制器增强
 public class GlobalExceptionHandler {
 
   //处理XueChengPlusException异常  此类异常是程序员主动抛出的，可预知异常

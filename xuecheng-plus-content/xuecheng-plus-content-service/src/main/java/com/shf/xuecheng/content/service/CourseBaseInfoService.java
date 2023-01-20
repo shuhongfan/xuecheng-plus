@@ -4,6 +4,7 @@ import com.shf.xuecheng.base.model.PageParams;
 import com.shf.xuecheng.base.model.PageResult;
 import com.shf.xuecheng.content.model.dto.AddCourseDto;
 import com.shf.xuecheng.content.model.dto.CourseBaseInfoDto;
+import com.shf.xuecheng.content.model.dto.EditCourseDto;
 import com.shf.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.shf.xuecheng.content.model.po.CourseBase;
 
@@ -34,4 +35,12 @@ public interface CourseBaseInfoService {
      * @return
      */
     public CourseBaseInfoDto getCourseBaseInfo(Long courseId);
+
+    /**
+     * 修改课程
+     * @param companyId
+     * @param editCourseDto
+     * @return
+     */
+    public CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto editCourseDto);
 }

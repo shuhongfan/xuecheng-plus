@@ -27,7 +27,7 @@
         id, pname, parentid, grade, media_type, start_time, end_time, description, timelength, orderby, course_id, course_pub_id, status, is_preview, create_date, change_date
     </sql>
 
-    <resultMap id="selectTreeNodesMap" type="com.shf.xuecheng.content.model.dto.TeachplanDto">
+    <resultMap id="selectTreeNodesMap1" type="com.shf.xuecheng.content.model.dto.TeachplanDto">
 
         <id column="one_id" property="id"></id>
         <result column="one_pname" property="pname"></result>
@@ -59,6 +59,37 @@
 
     </resultMap>
 
+    <resultMap id="selectTreeNodesMap" type="com.shf.xuecheng.content.model.dto.TeachplanDto">
+        <id column="one_id" property="id"/>
+        <result column="one_pname" property="pname"/>
+        <result column="one_parentid"     property="parentid" />
+        <result column="one_grade"  property="grade" />
+        <result column="one_mediaType"   property="mediaType" />
+        <result column="one_stratTime"   property="stratTime" />
+        <result column="one_endTime"   property="endTime" />
+        <result column="one_orderby"   property="orderby" />
+        <result column="one_courseId"   property="courseId" />
+        <result column="one_coursePubId"   property="coursePubId" />
+<!--        一对多映射-->
+        <collection property="teachPlanTreeNodes" ofType="com.shf.xuecheng.content.model.dto.TeachplanDto">
+            <id column="two_id" property="id"/>
+            <result column="two_pname" property="pname"></result>
+            <result column="two_parentid"     property="parentid" />
+            <result column="two_grade"  property="grade" />
+            <result column="two_mediaType"   property="mediaType" />
+            <result column="two_stratTime"   property="stratTime" />
+            <result column="two_endTime"   property="endTime" />
+            <result column="two_orderby"   property="orderby" />
+            <result column="two_courseId"   property="courseId" />
+            <result column="two_coursePubId"   property="coursePubId" />
+<!--            一对一映射-->
+            <association property="teachplanMedia" javaType="com.shf.xuecheng.content.model.po.TeachplanMedia">
+                <id column="teachplanMeidaId" property="id"/>
+                <result column="mediaFilename" property="mediaFilename"/>
+                <result column="mediaId" property="mediaId"/>
+            </association>
+        </collection>
+    </resultMap>
     <select id="selectTreeNodes" parameterType="long" resultMap="selectTreeNodesMap">
 
         SELECT

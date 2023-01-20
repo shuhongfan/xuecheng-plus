@@ -1,10 +1,7 @@
 package com.shf.xuecheng.base.exception;
 
 /**
- * @author Mr.M
- * @version 1.0
- * @description TODO
- * @date 2022/10/10 9:14
+ *
  */
 public class XueChengPlusException extends RuntimeException {
 
