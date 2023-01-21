@@ -84,7 +84,7 @@ public class TeachplanServiceImpl implements TeachplanService {
         LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(Teachplan::getParentid, id);
         List<Teachplan> teachplanList = teachplanMapper.selectList(wrapper);
-        if (teachplanList != null) {
+        if (teachplanList.size()!=0) {
 //            删除有子课程计划的计划
             XueChengPlusException.cast("课程计划还有子级信息，无法操作");
         }
@@ -109,9 +109,9 @@ public class TeachplanServiceImpl implements TeachplanService {
 
         LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(Teachplan::getParentid, teachplan.getParentid());
+        wrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
         wrapper.orderByAsc(Teachplan::getOrderby);
         List<Teachplan> teachplanList = teachplanMapper.selectList(wrapper);
-
 //        获取最后一个元素
         Teachplan last = teachplanList.get(teachplanList.size() - 1);
         if (last.getId() == id) {
@@ -129,7 +129,9 @@ public class TeachplanServiceImpl implements TeachplanService {
             queryWrapper.eq(Teachplan::getParentid, teachplan.getParentid());
             queryWrapper.ne(Teachplan::getId,currentTeachplan.getId());
             queryWrapper.eq(Teachplan::getOrderby, nextTeachplanOrderBy);
+            queryWrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
             Teachplan updateTeachplan = teachplanMapper.selectOne(queryWrapper);
+            updateTeachplan.setOrderby(teachplan.getOrderby());
             teachplanMapper.updateById(updateTeachplan);
         }
     }
@@ -140,8 +142,39 @@ public class TeachplanServiceImpl implements TeachplanService {
      */
     @Override
     public void moveUpTeachplan(long id) {
+        Teachplan teachplan = teachplanMapper.selectById(id);
+        if (teachplan == null) {
+//            课程计划不存在
+            XueChengPlusException.cast("课程计划不存在");
+        }
 
+        LambdaQueryWrapper<Teachplan> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Teachplan::getParentid, teachplan.getParentid());
+        wrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
+        wrapper.orderByAsc(Teachplan::getOrderby);
+        List<Teachplan> teachplanList = teachplanMapper.selectList(wrapper);
+//        获取第一个元素
+        Teachplan last = teachplanList.get(0);
+        if (last.getId() == id) {
+            XueChengPlusException.cast("课程计划已经属于第一个，无法上移");
+        } else {
+            List<Teachplan> collect = teachplanList.stream().filter(item -> item.getId() == id).collect(Collectors.toList());
+            Teachplan currentTeachplan = collect.get(0);
+            int preTeachplanOrderBy = currentTeachplan.getOrderby() - 1;
+//            当前计划上移
+            currentTeachplan.setOrderby(preTeachplanOrderBy);
+            teachplanMapper.updateById(currentTeachplan);
+
+//            下一个计划下移
+            LambdaQueryWrapper<Teachplan> queryWrapper = new LambdaQueryWrapper<>();
+            queryWrapper.eq(Teachplan::getParentid, teachplan.getParentid());
+            queryWrapper.ne(Teachplan::getId,currentTeachplan.getId());
+            queryWrapper.eq(Teachplan::getOrderby, preTeachplanOrderBy);
+            queryWrapper.eq(Teachplan::getCourseId, teachplan.getCourseId());
+            Teachplan updateTeachplan = teachplanMapper.selectOne(queryWrapper);
+            updateTeachplan.setOrderby(teachplan.getOrderby());
+            teachplanMapper.updateById(updateTeachplan);
+        }
     }
-
 
 }
