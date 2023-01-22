@@ -17,6 +17,10 @@ import java.util.*;
  */
 public class BigFileTest {
 
+    /**
+     * 测试分块
+     * @throws IOException
+     */
     @Test
     public void testChunk() throws IOException {
         //源文件
@@ -36,6 +40,7 @@ public class BigFileTest {
 
         //思路，使用流对象读取源文件，向分块文件写数据，达到分块大小不再写
         RandomAccessFile raf_read = new RandomAccessFile(sourceFile, "r");
+
         //缓冲区
         byte[] b = new byte[1024];
         for (long i = 0; i < chunkNum; i++) {

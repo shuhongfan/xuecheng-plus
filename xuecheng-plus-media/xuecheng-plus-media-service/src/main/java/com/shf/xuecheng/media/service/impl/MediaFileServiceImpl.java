@@ -214,6 +214,23 @@ public class MediaFileServiceImpl implements MediaFileService {
     }
 
     /**
+     * 如果是在uploadFile方法上添加@Transactional注解就可以控制事务，去掉则不行。
+     * 现在的问题其实是一个非事务方法调同类一个事务方法，事务无法控制，这是为什么？
+     *
+     * 如果在uploadFile方法上添加@Transactional注解，代理对象执行此方法前会开启事务，
+     * 如果在uploadFile方法上没有@Transactional注解，代理对象执行此方法前不进行事务控制。
+     * 所以判断该方法是否可以事务控制必须保证是通过代理对象调用此方法，且此方法上添加了@Transactional注解。
+     *
+     * 现在在addMediaFilesToDb方法上添加@Transactional注解，也不会进行事务控制是因为并不是通过代理对象执行的addMediaFilesToDb方法。
+     * 为了判断在uploadFile方法中去调用addMediaFilesToDb方法是否是通过代理对象去调用，我们可以打断点跟踪。
+     * 我们发现在uploadFile方法中去调用addMediaFilesToDb方法不是通过代理对象去调用。
+     *
+     * 如何解决呢？通过代理对象去调用addMediaFilesToDb方法即可解决。
+     * 在MediaFileService的实现类中注入MediaFileService的代理对象，通过代理对象调用方法
+     *
+     * 判断能否回滚，是否被spring事务控制
+     * 1. 是不是通过代理对象调用
+     * 2. 方法上是否有@Transactional
      * @param companyId
      * @param fileId
      * @param uploadFileParamsDto
@@ -256,13 +273,17 @@ public class MediaFileServiceImpl implements MediaFileService {
             mediaFiles.setStatus("1");
             mediaFiles.setAuditStatus("002003");
 
+            //保存文件信息到文件表
+            int insert = mediaFilesMapper.insert(mediaFiles);
+            if (insert < 0) {
+                XueChengPlusException.cast("保存文件信息失败");
+            }
 
-            //插入文件表
-            mediaFilesMapper.insert(mediaFiles);
+//            TODO 人为制造异常
+//            int i = 1 / 0;
 
             //对avi视频添加到待处理任务表
             if(mimeType.equals("video/x-msvideo")){
-
                 MediaProcess mediaProcess = new MediaProcess();
                 BeanUtils.copyProperties(mediaFiles,mediaProcess);
                 //设置一个状态
@@ -273,6 +294,11 @@ public class MediaFileServiceImpl implements MediaFileService {
         return mediaFiles;
     }
 
+    /**
+     * 检查文件是否存在
+     * @param fileMd5 文件的md5
+     * @return
+     */
     @Override
     public RestResponse<Boolean> checkFile(String fileMd5) {
 
@@ -282,7 +308,10 @@ public class MediaFileServiceImpl implements MediaFileService {
             return RestResponse.success(false);
         }
         //查看是否在文件系统存在
-        GetObjectArgs getObjectArgs = GetObjectArgs.builder().bucket(mediaFiles.getBucket()).object(mediaFiles.getFilePath()).build();
+        GetObjectArgs getObjectArgs = GetObjectArgs.builder()
+                .bucket(mediaFiles.getBucket())
+                .object(mediaFiles.getFilePath())
+                .build();
         try {
             InputStream inputStream = minioClient.getObject(getObjectArgs);
             if(inputStream==null){
@@ -297,9 +326,16 @@ public class MediaFileServiceImpl implements MediaFileService {
         return RestResponse.success(true);
     }
 
+    /**
+     * 检查分块是否存在
+     * video/3/a/3a5a861d1c745d05166132c47b44f9e4
+     * @param fileMd5  文件的md5
+     * @param chunkIndex  分块序号
+     * @return
+     */
     @Override
     public RestResponse<Boolean> checkChunk(String fileMd5, int chunkIndex) {
-
+//        数据库不存在
         //得到分块文件所在目录
         String chunkFileFolderPath = getChunkFileFolderPath(fileMd5);
         //分块文件的路径
@@ -307,7 +343,10 @@ public class MediaFileServiceImpl implements MediaFileService {
 
         //查询文件系统分块文件是否存在
         //查看是否在文件系统存在
-        GetObjectArgs getObjectArgs = GetObjectArgs.builder().bucket(bucket_videofiles).object(chunkFilePath).build();
+        GetObjectArgs getObjectArgs = GetObjectArgs.builder()
+                .bucket(bucket_videofiles)
+                .object(chunkFilePath)
+                .build();
         try {
             InputStream inputStream = minioClient.getObject(getObjectArgs);
             if(inputStream==null){
@@ -323,6 +362,13 @@ public class MediaFileServiceImpl implements MediaFileService {
         return RestResponse.success(true);
     }
 
+    /**
+     * 上传分块
+     * @param fileMd5  文件md5
+     * @param chunk  分块序号
+     * @param bytes  文件字节
+     * @return
+     */
     @Override
     public RestResponse uploadChunk(String fileMd5, int chunk, byte[] bytes) {
 
@@ -343,7 +389,9 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     }
 
-    //合并分块
+    /**
+     * 合并分块
+     */
     @Override
     public RestResponse mergechunks(Long companyId, String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto) {
         //下载分块
@@ -418,8 +466,6 @@ public class MediaFileServiceImpl implements MediaFileService {
             if(tempMergeFile!=null){
                 tempMergeFile.delete();
             }
-
-
         }
     }
 
@@ -437,9 +483,16 @@ public class MediaFileServiceImpl implements MediaFileService {
         return mediaFiles;
     }
 
+    /**
+     * 拿到合并文件在minio的存储路径
+     * @param fileMd5
+     * @param fileExt
+     * @return
+     */
     private String getFilePathByMd5(String fileMd5,String fileExt){
-        return   fileMd5.substring(0,1) + "/" + fileMd5.substring(1,2) + "/" + fileMd5 + "/" +fileMd5 +fileExt;
+        return  fileMd5.substring(0,1) + "/" + fileMd5.substring(1,2) + "/" + fileMd5 + "/" +fileMd5 +fileExt;
     }
+
     /**
      * @description 下载分块
      * @param fileMd5
@@ -461,6 +514,7 @@ public class MediaFileServiceImpl implements MediaFileService {
             //分块文件
             File chunkFile = null;
             try {
+//                创建临时分块文件
                 chunkFile = File.createTempFile("chunk", null);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -480,7 +534,10 @@ public class MediaFileServiceImpl implements MediaFileService {
     //根据桶和文件路径从minio下载文件
     public File downloadFileFromMinIO(File file,String bucket,String objectName){
 
-        GetObjectArgs getObjectArgs = GetObjectArgs.builder().bucket(bucket).object(objectName).build();
+        GetObjectArgs getObjectArgs = GetObjectArgs.builder()
+                .bucket(bucket)
+                .object(objectName)
+                .build();
         try(
                 InputStream inputStream = minioClient.getObject(getObjectArgs);
                 FileOutputStream outputStream =new FileOutputStream(file);
@@ -494,7 +551,9 @@ public class MediaFileServiceImpl implements MediaFileService {
         return null;
     }
 
-    //得到分块文件的目录
+    /**
+     * 得到分块文件的目录
+     */
     private String getChunkFileFolderPath(String fileMd5) {
         return fileMd5.substring(0, 1) + "/" + fileMd5.substring(1, 2) + "/" + fileMd5 + "/" + "chunk" + "/";
     }

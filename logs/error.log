@@ -19,3 +19,4 @@ java.net.BindException: Address already in use: bind
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
+2023-01-22 17:49:02,607 ERROR [http-nio-63050-exec-3][GlobalExceptionHandler.java:31] - 捕获异常：上传文件过程中出错，请重新上传
