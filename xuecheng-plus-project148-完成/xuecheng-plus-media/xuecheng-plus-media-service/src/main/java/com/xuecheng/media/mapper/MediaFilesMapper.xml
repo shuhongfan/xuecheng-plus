@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xuecheng.media.mapper.MediaFilesMapper">
+<mapper namespace="mapper.media.com.shf.xuecheng.MediaFilesMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.xuecheng.media.model.po.MediaFiles">
+    <resultMap id="BaseResultMap" type="po.model.media.com.shf.xuecheng.MediaFiles">
         <id column="id" property="id" />
         <result column="company_id" property="companyId" />
         <result column="company_name" property="companyName" />

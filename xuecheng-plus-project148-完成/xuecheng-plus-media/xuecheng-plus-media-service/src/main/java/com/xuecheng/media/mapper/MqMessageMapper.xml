@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xuecheng.media.mapper.MqMessageMapper">
+<mapper namespace="mapper.media.com.shf.xuecheng.MqMessageMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.xuecheng.media.model.po.MqMessage">
+    <resultMap id="BaseResultMap" type="po.model.media.com.shf.xuecheng.MqMessage">
         <id column="id" property="id" />
         <result column="message_type" property="messageType" />
         <result column="business_key1" property="businessKey1" />

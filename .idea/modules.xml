@@ -8,7 +8,12 @@
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/xuecheng-plus-content-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/xuecheng-plus-content-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/xuecheng-plus-content-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/xuecheng-plus-content-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/xuecheng-plus-content-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/xuecheng-plus-content-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-gateway/xuecheng-plus-gateway.iml" filepath="$PROJECT_DIR$/xuecheng-plus-gateway/xuecheng-plus-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-generator/xuecheng-plus-generator.iml" filepath="$PROJECT_DIR$/xuecheng-plus-generator/xuecheng-plus-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media.iml" filepath="$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-api/xuecheng-plus-media-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-api/xuecheng-plus-media-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-model/xuecheng-plus-media-model.iml" filepath="$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-model/xuecheng-plus-media-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-service/xuecheng-plus-media-service.iml" filepath="$PROJECT_DIR$/xuecheng-plus-media/xuecheng-plus-media-service/xuecheng-plus-media-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-parent/xuecheng-plus-parent.iml" filepath="$PROJECT_DIR$/xuecheng-plus-parent/xuecheng-plus-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/xuecheng-plus-system-api.iml" filepath="$PROJECT_DIR$/xuecheng-plus-system/xuecheng-plus-system-api/xuecheng-plus-system-api.iml" />
