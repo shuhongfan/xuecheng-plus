@@ -67,6 +67,8 @@
             <artifactId>okhttp</artifactId>
             <version>4.8.1</version>
         </dependency>
+
+<!--        xxl-job任务调度-->
         <dependency>
             <groupId>com.xuxueli</groupId>
             <artifactId>xxl-job-core</artifactId>

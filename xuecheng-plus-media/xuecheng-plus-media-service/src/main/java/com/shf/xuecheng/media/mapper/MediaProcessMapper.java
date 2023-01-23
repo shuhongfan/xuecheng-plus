@@ -3,7 +3,6 @@ package com.shf.xuecheng.media.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.shf.xuecheng.media.model.po.MediaProcess;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -16,7 +15,13 @@ import java.util.List;
  */
 public interface MediaProcessMapper extends BaseMapper<MediaProcess> {
 
-    @Select("SELECT * FROM media_process t where t.id % #{shardTotal} = #{shardIndex} LIMIT #{count}")
+    /**
+     * XXLJOB 分片调度
+     * @param shardTotal 分片总数
+     * @param shardIndex 分片序号
+     * @param count 获取记录数
+     * @return
+     */
     public List<MediaProcess> selectListByShardIndex(@Param("shardTotal") int shardTotal,@Param("shardIndex") int shardIndex,@Param("count") int count);
 
 }

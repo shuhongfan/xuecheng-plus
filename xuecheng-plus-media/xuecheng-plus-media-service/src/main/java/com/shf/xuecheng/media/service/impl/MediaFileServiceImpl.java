@@ -262,7 +262,8 @@ public class MediaFileServiceImpl implements MediaFileService {
             if(StringUtils.isNotEmpty(filename) && filename.indexOf(".")>=0){
                 extension = filename.substring(filename.lastIndexOf("."));
             }
-            //媒体类型
+
+            //媒体类型 根据扩展名拿匹配的媒体类型
             String mimeType = getMimeTypeByextension(extension);
             //图片、mp4视频可以设置URL
             if(mimeType.indexOf("image")>=0 || mimeType.indexOf("mp4")>=0){
@@ -469,6 +470,11 @@ public class MediaFileServiceImpl implements MediaFileService {
         }
     }
 
+    /**
+     * 根据id查询文件信息
+     * @param id  文件id
+     * @return
+     */
     @Override
     public MediaFiles getFileById(String id) {
         MediaFiles mediaFiles = mediaFilesMapper.selectById(id);
@@ -531,7 +537,9 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     }
 
-    //根据桶和文件路径从minio下载文件
+    /**
+     * 根据桶和文件路径从minio下载文件
+     */
     public File downloadFileFromMinIO(File file,String bucket,String objectName){
 
         GetObjectArgs getObjectArgs = GetObjectArgs.builder()

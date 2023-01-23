@@ -18,5 +18,9 @@
     <sql id="Base_Column_List">
         id, file_id, filename, bucket, status, create_date, finish_date, url
     </sql>
-
+    <select id="selectListByShardIndex" resultType="com.shf.xuecheng.media.model.po.MediaProcess">
+        SELECT * FROM media_process t
+        where t.id % #{shardTotal} = #{shardIndex}
+        LIMIT #{count}
+    </select>
 </mapper>

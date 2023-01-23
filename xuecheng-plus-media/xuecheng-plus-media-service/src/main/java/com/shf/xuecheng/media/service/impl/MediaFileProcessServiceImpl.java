@@ -28,12 +28,12 @@ import java.util.List;
 public class MediaFileProcessServiceImpl implements MediaFileProcessService {
 
     @Autowired
-    MediaProcessMapper mediaProcessMapper;
+    private MediaProcessMapper mediaProcessMapper;
     @Autowired
-    MediaProcessHistoryMapper mediaProcessHistoryMapper;
+    private MediaProcessHistoryMapper mediaProcessHistoryMapper;
 
     @Autowired
-    MediaFilesMapper mediaFilesMapper;
+    private MediaFilesMapper mediaFilesMapper;
 
     @Override
     public List<MediaProcess> getMediaProcessList(int shardIndex, int shardTotal, int count) {
@@ -50,9 +50,12 @@ public class MediaFileProcessServiceImpl implements MediaFileProcessService {
             log.debug("更新任务状态时此任务:{}为空",taskId);
             return ;
         }
-        LambdaQueryWrapper<MediaProcess> queryWrapperById = new LambdaQueryWrapper<MediaProcess>().eq(MediaProcess::getId, taskId);
+
+        // 判断任务成功还是失败
+        LambdaQueryWrapper<MediaProcess> queryWrapperById = new LambdaQueryWrapper<>();
+        queryWrapperById.eq(MediaProcess::getId, taskId);
         if("3".equals(status)){
-            //任务失败
+            //任务失败,更新任务失败原因
             MediaProcess mediaProcess_u = new MediaProcess();
             mediaProcess_u.setStatus("3");//处理失败
             mediaProcess_u.setErrormsg(errorMsg);
@@ -70,8 +73,8 @@ public class MediaFileProcessServiceImpl implements MediaFileProcessService {
             MediaFiles mediaFiles = mediaFilesMapper.selectById(fileId);
             mediaFiles.setUrl(url);
             mediaFilesMapper.updateById(mediaFiles);
-
         }
+
         //如果处理成功将任务添加到历史记录表
         MediaProcessHistory mediaProcessHistory = new MediaProcessHistory();
         BeanUtils.copyProperties(mediaProcess,mediaProcessHistory);
@@ -79,9 +82,5 @@ public class MediaFileProcessServiceImpl implements MediaFileProcessService {
 
         //如果处理成功将待处理表的记录删除
         mediaProcessMapper.deleteById(taskId);
-
-
-
-
     }
 }

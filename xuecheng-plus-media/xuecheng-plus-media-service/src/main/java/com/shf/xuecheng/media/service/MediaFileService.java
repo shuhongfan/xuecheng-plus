@@ -109,8 +109,16 @@ public interface MediaFileService {
   */
  public MediaFiles getFileById(String id);
 
- //根据桶和文件路径从minio下载文件
+ /**
+  * 根据桶和文件路径从minio下载文件
+  */
  public File downloadFileFromMinIO(File file, String bucket, String objectName);
 
+ /**
+  * 将文件上传到minio中
+  * @param filePath
+  * @param bucket
+  * @param objectName
+  */
  public void addMediaFilesToMinIO(String filePath, String bucket, String objectName);
 }
