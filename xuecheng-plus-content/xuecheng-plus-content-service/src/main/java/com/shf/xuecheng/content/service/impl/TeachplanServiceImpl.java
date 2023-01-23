@@ -3,15 +3,20 @@ package com.shf.xuecheng.content.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.shf.xuecheng.base.exception.XueChengPlusException;
 import com.shf.xuecheng.content.mapper.TeachplanMapper;
+import com.shf.xuecheng.content.mapper.TeachplanMediaMapper;
+import com.shf.xuecheng.content.model.dto.BindTeachplanMediaDto;
 import com.shf.xuecheng.content.model.dto.SaveTeachplanDto;
 import com.shf.xuecheng.content.model.dto.TeachplanDto;
 import com.shf.xuecheng.content.model.po.Teachplan;
+import com.shf.xuecheng.content.model.po.TeachplanMedia;
 import com.shf.xuecheng.content.service.TeachplanService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,6 +26,9 @@ public class TeachplanServiceImpl implements TeachplanService {
 
     @Autowired
     private TeachplanMapper teachplanMapper;
+
+    @Autowired
+    private TeachplanMediaMapper teachplanMediaMapper;
 
     /**
      * 课程计划查询
@@ -175,6 +183,45 @@ public class TeachplanServiceImpl implements TeachplanService {
             updateTeachplan.setOrderby(teachplan.getOrderby());
             teachplanMapper.updateById(updateTeachplan);
         }
+    }
+
+    /**
+     * 课程计划和媒资信息绑定
+     * @param bindTeachplanMediaDto
+     * @return
+     */
+    @Override
+    @Transactional
+    public TeachplanMedia associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto) {
+//        教学计划Id
+        Long teachplanId = bindTeachplanMediaDto.getTeachplanId();
+        if (teachplanId == null) {
+            XueChengPlusException.cast("教学计划不存在");
+        }
+        Teachplan teachplan = teachplanMapper.selectById(teachplanId);
+
+//        校验约束
+//        只有二级目录才可以绑定视频
+        Integer grade = teachplan.getGrade();
+        if (grade != 2) {
+            XueChengPlusException.cast("只有二级目录才可以绑定视频");
+        }
+
+//        删除原来的绑定关系
+        LambdaQueryWrapper<TeachplanMedia> teachplanMediaLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        teachplanMediaLambdaQueryWrapper.eq(TeachplanMedia::getTeachplanId, teachplan.getId());
+        teachplanMediaMapper.delete(teachplanMediaLambdaQueryWrapper);
+
+//        添加新的绑定关系
+        TeachplanMedia teachplanMedia = new TeachplanMedia();
+        teachplanMedia.setCourseId(teachplan.getCourseId());
+        teachplanMedia.setTeachplanId(teachplanId);
+        teachplanMedia.setMediaFilename(bindTeachplanMediaDto.getFileName());
+        teachplanMedia.setMediaId(bindTeachplanMediaDto.getMediaId());
+        teachplanMedia.setCreateDate(LocalDateTime.now());
+        teachplanMediaMapper.insert(teachplanMedia);
+
+        return teachplanMedia;
     }
 
 }

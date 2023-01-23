@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/js/vue/vue.min.js"></script>
+    <script src="/js/jwt-decode/jwt-decode.min.js"></script>
+    <script src="/js/base64.min.js"></script>
+    <script src="/js/axios/axios.min.js"></script>
+    <script src="/js/querystring/index.js"></script>
+    <script src="/js/public.js"></script>
+    <script src="/js/order.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/css/el/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body >
+<!-- 页面 css js -->
+<script type="text/javascript" src="/static/plugins/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+    $('.vid-act').click(function() {
+        $(this).find('.i-heart').css('background-position', '4px -55px')
+    })
+
+
+    $(function() {
+        //点击下拉
+        //用法：HTML 点击事件为more,父级使用overflow：hidden；限定高 more与要展开的内容为同级 要展开内容添加 drop-down的class
+        function ckMove(target, ckgar, het, text, incr) {
+            var inc = incr ? incr : 0;
+            $(target).find(ckgar).on('click', function() {
+                var h = $(this).parent().find('.drop-down ul').height();
+                if (!$(this).hasClass('act')) {
+                    $(this).addClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': (h + inc) + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-bot').addClass('i-chevron-top')
+                } else {
+                    $(this).removeClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': het + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-top').addClass('i-chevron-bot')
+                }
+            })
+        }
+        //章节收缩
+        ckMove('.article-cont .article-left-box', '.title', 0);
+
+        /* $('.learing-box .item-list').mouseover(function(e) {
+         $(this).css({
+         'height': '140px'
+         }).addClass('hov').siblings().css({
+         'height': '50px'
+         })
+         $(this).siblings().removeClass('hov')
+         })
+         $('.learing-box .item-box').mouseout(function() {
+         $(this).find('.item-list:first').css({
+         'height': '140px'
+         }).addClass('hov')
+         $(this).find('.item-list:first').siblings().css({
+         'height': '50px'
+         }).removeClass('hov')
+         })*/
+    })
+
+
+    /*$(function() {
+     $('.learing-box .item-list').mouseover(function(e) {
+     $(this).css({
+     'height': '140px'
+     }).addClass('hov').siblings().css({
+     'height': '50px'
+     })
+     $(this).siblings().removeClass('hov')
+     })
+     $('.learing-box .item-box').mouseout(function() {
+     $(this).find('.item-list:first').css({
+     'height': '140px'
+     }).addClass('hov')
+     $(this).find('.item-list:first').siblings().css({
+     'height': '50px'
+     }).removeClass('hov')
+     })
+     })*/
+
+
+    $(function() {
+        $('.active-box span').click(function() {
+            $(this).css({
+                'color': '#00a4ff'
+            })
+            if ($(this).find('i').hasClass('i-laud')) {
+                $(this).find('.i-laud').css('background-position', '-80px -19px')
+            } else if ($(this).find('i').hasClass('i-coll')) {
+                $(this).find('.i-coll').css('background-position', '1px -75px')
+            }
+        })
+        /*$('.learing-box .item-list').mouseover(function(e) {
+         $(this).css({
+         'height': '140px'
+         }).addClass('hov').siblings().css({
+         'height': '50px'
+         })
+         $(this).siblings().removeClass('hov')
+         })
+         $('.learing-box .item-box').mouseout(function() {
+         $(this).find('.item-list:first').css({
+         'height': '140px'
+         }).addClass('hov')
+         $(this).find('.item-list:first').siblings().css({
+         'height': '50px'
+         }).removeClass('hov')
+         })*/
+    })
+
+
+    $(function() {
+        //评分
+        $('.star .score').map(function(n, i) {
+            var x = Number($(this).find('i').text());
+            var w = 109 * (1 - x / 5);
+            $(this).css('width', w + 'px');
+        })
+        //评论打分
+        $('.evaluate .star').mousemove(function(e) {
+            var startX = $(this).offset().left;
+            var movX = e.clientX - startX + 0.5;
+            var w = 145 * (1 - movX / 145);
+            $(this).find('.score').css('width', w + 'px');
+            $('.star-score i').text((movX / 145 * 5).toFixed(1))
+        })
+        //星级评分
+        $('.grade').map(function(n, i) {
+            var pret = $(this).find('.percent-num i').text();
+            var wt = $(this).find('.grade-percent').width();
+            $(this).find('.grade-percent span').css('width', wt * pret / 100);
+        })
+
+
+
+    })
+
+
+    $(function() {
+        //点击下拉
+        function ckMove(target, het, text, incr) {
+            var inc = incr ? incr : 0;
+            $(target).find('.on-off').on('click', function() {
+                var h = $(this).parent().find('.drop-down p').height();
+                if (!$(this).hasClass('act')) {
+                    $(this).addClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': (h + inc) + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-bot').addClass('i-chevron-top')
+                } else {
+                    $(this).removeClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': het + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-top').addClass('i-chevron-bot')
+                }
+            })
+        }
+        ckMove('.cktop', 60);
+        ckMove('.cont .item', 0);
+        //点击关闭弹窗
+        $('.close-popup-course-box').click(function() {
+            $('.popup-course').hide();
+        })
+        $('.close-popup-pay-box').click(function() {
+            $('.popup-box').hide();
+        })
+        $('.tit-list a').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            var clasNod = '.' + $(this)[0].id
+            $(clasNod).show().siblings().hide()
+        })
+        // 资料下载
+        $('.down-fill span').click(function() {
+            $('.down-fill ul').css({
+                display: 'block'
+            });
+        })
+        $('.down-fill ul li').click(function() {
+            $('.down-fill ul').css({
+                display: 'none'
+            });
+        })
+    })
+</script>
+<script>
+
+   var learningVM= new Vue({   
+        el: "#learningArea", 
+
+        data: {
+            editLoading: false,
+            title:'',
+            courseId:'',
+            charge:'',
+            learnstatus:'',//课程状态，1：马上学习，2：立即报名、3：立即购买
+            course:{},
+            companyId:'template',
+            company_stat:[],
+            course_stat:{"s601001":"","s601002":"","s601003":""},
+            qrcode:''
+
+        },
+        methods: {
+            //马上学习
+            startLearning(){
+                
+                 if(String(window.location).indexOf("/coursepreview/")>0){
+                    window.location.href="http://www.xuecheng-plus.com/course/preview/learning.html?id="+this.courseId
+                    return ;
+                }
+                let activeUser= getActiveUser();
+                if(activeUser){
+                    //判断学习资格
+                    this.getLearningStatus();
+                }else{
+                    //学习引导
+                    this.learningGuide();
+                }
+            },
+            learningGuide(){
+                if(this.charge == '201000'){
+                    $('.popup-course').show()
+                }else{
+                    $('.popup-box').show()
+                }
+            },
+            getLearningStatus(){
+                if(this.charge == '201000'){
+                    $('.popup-course').show()
+                }else{
+                    //当前用户
+                    let activeUser= getActiveUser();
+                   let userid = activeUser.userid;
+                //判断是否购买
+                //判断学生的选课状态
+                queryLearnstatus(this.courseId).then((res)=>{
+                    console.log(res)
+                    if(res.learnStatus){
+                        if(res.learnStatus == '702001'){//正常
+                            $('.popup-course').show()
+                        }else if(res.learnStatus == '702002'){
+                            //需要购买课程
+                            $('.popup-box').show()
+                        }else{
+                            //已过期需要申请续期或重新支付
+                            this.$message.success('该课程已过期请进入选课列表申请续期或重新支付');
+                        }
+                    }
+                })
+                }
+              
+           },
+           startLearngin(){
+            window.location.href="http://www.xuecheng-plus.com/course/learning.html?id="+this.courseId
+           },
+            //学习报名
+            addCourseTable(){
+                
+                let activeUser= getActiveUser();
+                if(activeUser){
+                    addChoosecourse(this.courseId).then((res) => {
+                        if(res.learnStatus){
+                        if(res.learnStatus == '702001'){//正常
+                            //开始学习
+                            this.startLearngin()
+                        }else if(res.learnStatus == '702002'){
+                            //需要购买课程
+                            $('.popup-box').show()
+                        }else{
+                            //已过期需要申请续期或重新支付
+                            this.$message.success('该课程已过期请进入选课列表申请续期或重新支付');
+                        }
+                    }
+                    })
+                }else{
+                    //弹出登录框架
+                    showlogin()
+                }
+            },
+            pay(){
+                
+            },
+            //立即购买
+            wxPay(){
+                this.$message.success('微信支付');
+
+            },
+            aliPay(){
+                let activeUser= getActiveUser();
+                if(activeUser){
+                    addChoosecourse(this.courseId).then((res) => {
+                        if(res.learnStatus){
+                        if(res.learnStatus == '702001'){//正常
+                            //开始学习
+                            this.startLearngin()
+                        }else if(res.learnStatus == '702002'){
+                           //生成支付二维码
+                           //$('.popup-box').show()
+                           this.createQRCode(res)
+                        }else{
+                            //已过期需要申请续期或重新支付
+                            this.$message.success('该课程已过期请进入选课列表申请续期或重新支付');
+                        }
+                    }
+                    })
+                }else{
+                    //弹出登录框架
+                    showlogin()
+                }
+
+            },
+            createQRCode(chooseCourse){//生成支付二维码
+                    var addOrderDto={
+                        "totalPrice":chooseCourse.coursePrice,
+                        "orderType":'60201',
+                        "orderName":chooseCourse.courseName,
+                        "orderDescrip":'购买课程:'+chooseCourse.courseName,
+                        "orderDetail":'',
+                        "outBusinessId":chooseCourse.id
+                    }
+                    // addOrderDto.totalPrice = chooseCourse.coursePrice
+                    // addOrderDto.orderType='60201'
+                    // addOrderDto.orderName=chooseCourse.courseName;
+                    // addOrderDto.orderDescrip='购买课程:'+chooseCourse.courseName
+                    // addOrderDto.orderDetail=JSON.stringify(chooseCourse)
+                    // addOrderDto.outBusinessId=chooseCourse.id
+                    var goods={
+                        "goodsId":chooseCourse.courseId,
+                        "goodsType":'60201',
+                        "goodsName":chooseCourse.courseName,
+                        "goodsPrice":chooseCourse.coursePrice
+                    }
+                    var goodsArray=[goods]
+                    addOrderDto.orderDetail=JSON.stringify(goodsArray)
+                    console.log(addOrderDto)
+                    generatepaycode(addOrderDto).then((res) => {
+                        if(res&&res.qrcode){
+                            this.qrcode=res.qrcode
+                        }
+                    })
+
+            },
+            createOrder(){
+                createOrder(this.courseId).then((res) => {
+                        this.editLoading = false;
+                        if(res.success){
+                            this.$message.success('订单创建成功');
+                            //跳转到支付页面
+                            window.location = "http://ucenter.xuecheng.com/#/pay/"+res.xcOrders.orderNumber
+                        }else{
+                            if(res.message){
+                                this.$message.error(res.message);
+                            }else{
+                                this.$message.error('订单创建失败，请刷新页面重试');
+                            }
+                        }
+                    },
+                    (res) => {
+                        this.editLoading = false;
+                    });
+            }
+
+        },
+       created() {
+
+           this.courseId = courseId;
+           this.charge = courseCharge;
+
+        },
+        mounted(){
+           // alert(courseId)
+
+        }
+    })
+</script>
+</body>
+</html>

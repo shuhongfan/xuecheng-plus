@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://www.xuecheng-plus.com/static/img/asset-favicon.ico">
+    <title>登录</title>
+    <link rel="stylesheet" href="http://www.xuecheng-plus.com/static/plugins/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="http://www.xuecheng-plus.com/static/plugins/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="http://www.xuecheng-plus.com/static/css/page-learing-sign.css" />
+</head>
+
+<body>
+<!-- 页面头部 -->
+<!--#include virtual="/include/header.html"-->
+    <!-- 页面 -->
+    <div id="loginarea" class="register">
+        <!--<img src="../../assets/img/logoico.png" alt="logo" width="200">-->
+
+        <div class="register-body container text-center">
+            <div class="signTit cl"><span class="sign activ">登录</span><span ><a href="http://www.xuecheng-plus.com/register.html">注册</a></span></div>
+            <div class="signItem show">
+                <div>
+                    <p>账户名</p>
+                    <p>
+                        <input type="text" name="username" class="textInput" v-model="usernamejson.username">
+                        <span class="proof cl-orange"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>登录密码</p>
+                    <p>
+                        <input type="password" name="password" class="textInput" v-model="usernamejson.password">
+                        <span class="proof cl-orange"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>验证码</p>
+                    <p>
+                        <img :src="checkcode_img"/>
+                        <input type="text" name="checkcode" v-model="usernamejson.checkcode">
+                        <input type="hidden" name="checkcodekey" v-model="usernamejson.checkcodekey">
+                        <span class="proof cl-orange"></span>
+                    </p>
+                </div>
+
+                <div class="setSing">
+                    <label><input type="checkbox" v-model="autologin">30天自动登录</label>
+                    <a href="/findpassword.html" class="forget">忘记密码</a>
+                </div>
+                <div >
+                    <input class="submitBut" style="width:100%" type="button" value="登录" @click="login()"/>
+                    
+                </div>
+                <div>
+                    <a href='/wxsign.html'><img src="/static/img/weixin.png" width="40" height="40"/></a>
+                </div>
+            </div>
+           
+        </div>
+<!--底部版权-->
+<!--#include virtual="/include/footer.html"-->
+    </div>
+    <!-- 页面 css js -->
+    <script type="text/javascript" src="/plugins/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/js/page-learing-sign.js"></script>
+<script>
+     var loginVm= new Vue({  
+            el: "#loginarea", 
+            data: {
+              usernamejson:{
+                 username:'',
+                  password:'',
+                  checkcode:'',
+                  checkcodekey:'',
+                  authType:'password'
+              },
+              formdata:{
+                  username:'',
+                  grant_type:'password',
+                  client_secret:'XcWebApp',
+                  client_id:'XcWebApp'
+              },
+              autologin:false,
+              checkcode_img:'',
+              returnUrl:''
+
+            },
+            methods: {
+              login(){
+                  //转json串
+                  let usernameJson = JSON.stringify(this.usernamejson)
+                  console.log(usernameJson)
+                  this.formdata.username = usernameJson;
+                  let params = querystringify(this.formdata);
+                   loginSubmit(params).then(res=>{
+                        console.log(res)
+                        if(res&& res.access_token){
+
+                            if(this.autologin){
+                                setCookie('jwt',res.access_token,30)
+                            }else{
+                                setCookie('jwt',res.access_token,0)
+                            }
+                            
+                            this.$message.success('登录成功')
+                            if(this.returnUrl){
+                              top.location=this.returnUrl
+                            }else{
+                              top.location='/'
+                            }
+                            
+                        }
+
+                  }).catch(error=>{
+                    if(error&&error.response&&error.response.data&&error.response.data.error_description){
+                        this.$message.error(error.response.data.error_description)
+                    }
+                    this.getCheckCode();
+                  })
+    
+              },
+              getCheckCode(){
+                getCheckCodeSubmit().then(res=>{
+                    //console.log(res)
+                      if(res&&res.aliasing){
+                        this.checkcode_img = res.aliasing
+                      }
+                      if(res&&res.key){
+                        this.usernamejson.checkcodekey = res.key
+                      }else{
+                        this.$message.error('加载验证码出错')
+                      }
+              })
+              }
+
+            },
+            created() {
+              var username = GetQueryString("username");
+              var authType = GetQueryString("authType");
+              var returnUrl = GetQueryString("returnUrl");
+              if(returnUrl){
+                this.returnUrl=Base64.decode(returnUrl)
+                //console.log(this.returnUrl)
+              }
+              if(username && authType && authType=='wx'){
+                this.usernamejson.username = username;
+                this.usernamejson.authType = authType;
+                console.log(this.usernamejson)
+                this.login();
+              }else{
+                this.getCheckCode();
+              }
+              
+            },
+            mounted(){
+               
+            }
+          })
+</script>
+</body>
