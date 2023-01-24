@@ -14,6 +14,14 @@
         <option value="$PROJECT_DIR$/xuecheng-plus-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-plus-media/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-plus-message-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-base/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-content/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-media/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-message-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-project/xuecheng-plus-system/pom.xml" />
       </list>
     </option>
   </component>
