@@ -2,6 +2,8 @@ package com.shf.xuecheng.content.service;
 
 import com.shf.xuecheng.content.model.dto.CoursePreviewDto;
 
+import java.io.File;
+
 /**
  * 课程发布
  */
@@ -39,4 +41,25 @@ public interface CoursePublishService {
      * @param courseId
      */
     public void saveCoursePublish(Long courseId);
+
+    /**
+     * @description 课程静态化
+     * @param courseId  课程id
+     * @return File 静态化文件
+     */
+    public File generateCourseHtml(Long courseId);
+
+    /**
+     * @description 上传课程静态化页面
+     * @param file  静态化文件
+     * @return void
+     */
+    public void uploadCourseHtml(Long courseId,File file);
+
+    /**
+     * 保存课程索引
+     * @param courseId
+     * @return
+     */
+    public Boolean saveCourseIndex(Long courseId);
 }

@@ -19,7 +19,7 @@ import java.util.concurrent.*;
 public abstract class MessageProcessAbstract {
 
     @Autowired
-    MqMessageService mqMessageService;
+    private MqMessageService mqMessageService;
 
 
     /**

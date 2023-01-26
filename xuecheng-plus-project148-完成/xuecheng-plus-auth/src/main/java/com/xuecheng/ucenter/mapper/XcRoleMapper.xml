@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xuecheng.ucenter.mapper.XcRoleMapper">
+<mapper namespace="mapper.ucenter.com.shf.xuecheng.XcRoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.xuecheng.ucenter.model.po.XcRole">
+    <resultMap id="BaseResultMap" type="po.model.ucenter.com.shf.xuecheng.XcRole">
         <id column="id" property="id" />
         <result column="role_name" property="roleName" />
         <result column="role_code" property="roleCode" />

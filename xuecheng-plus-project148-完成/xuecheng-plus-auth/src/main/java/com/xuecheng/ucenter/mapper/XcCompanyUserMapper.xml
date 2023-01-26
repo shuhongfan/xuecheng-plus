@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xuecheng.ucenter.mapper.XcCompanyUserMapper">
+<mapper namespace="mapper.ucenter.com.shf.xuecheng.XcCompanyUserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.xuecheng.ucenter.model.po.XcCompanyUser">
+    <resultMap id="BaseResultMap" type="po.model.ucenter.com.shf.xuecheng.XcCompanyUser">
         <id column="id" property="id" />
         <result column="company_id" property="companyId" />
         <result column="user_id" property="userId" />

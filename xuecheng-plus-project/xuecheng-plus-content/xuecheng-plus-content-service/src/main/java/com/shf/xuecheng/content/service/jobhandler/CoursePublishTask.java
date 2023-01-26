@@ -1,18 +1,26 @@
 package com.shf.xuecheng.content.service.jobhandler;
 
+import com.shf.xuecheng.base.exception.XueChengPlusException;
+import com.shf.xuecheng.content.service.CoursePublishService;
 import com.shf.xuecheng.messagesdk.model.po.MqMessage;
 import com.shf.xuecheng.messagesdk.service.MessageProcessAbstract;
 import com.shf.xuecheng.messagesdk.service.MqMessageService;
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Component
 public class CoursePublishTask extends MessageProcessAbstract {
+
+    @Autowired
+    private CoursePublishService coursePublishService;
+
     /**
      * 课程发布消息类型
      */
@@ -54,7 +62,6 @@ public class CoursePublishTask extends MessageProcessAbstract {
      * 生成课程静态化页面并上传至文件系统
      */
     public void generateCourseHtml(MqMessage mqMessage,long courseId){
-
         log.debug("开始进行课程静态化,课程id:{}",courseId);
         //消息id
         Long id = mqMessage.getId();
@@ -72,6 +79,22 @@ public class CoursePublishTask extends MessageProcessAbstract {
             throw new RuntimeException(e);
         }
         //保存第一阶段状态
+        mqMessageService.completedStageOne(id);
+        if(stageOne>0){
+            log.debug("当前阶段是静态化课程信息任务已经完成不再处理,任务信息:{}",mqMessage);
+            return ;
+        }
+
+//        生成静态化页面
+        File file = coursePublishService.generateCourseHtml(courseId);
+        if (file == null) {
+            XueChengPlusException.cast("课程静态化异常");
+        }
+
+//        上传静态化页面
+        coursePublishService.uploadCourseHtml(courseId, file);
+
+//        保存第一阶段状态
         mqMessageService.completedStageOne(id);
     }
 
@@ -92,10 +115,24 @@ public class CoursePublishTask extends MessageProcessAbstract {
      */
     public void saveCourseIndex(MqMessage mqMessage,long courseId){
         log.debug("保存课程索引信息,课程id:{}",courseId);
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+
+//        消息id
+        Long id = mqMessage.getId();
+
+//        消息处理的service
+        MqMessageService mqMessageService = getMqMessageService();
+
+//        消息幂等性处理
+        int stageTwo = mqMessageService.getStageTwo(id);
+        if (stageTwo == 2) {
+            log.debug("课程索引已处理直接返回，课程id:{}",courseId);
+            return ;
+        }
+
+        Boolean result = coursePublishService.saveCourseIndex(courseId);
+        if (result) {
+//            保存第二阶段状态
+            mqMessageService.completedStageTwo(id);
         }
     }
 }

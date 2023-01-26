@@ -8,6 +8,17 @@
     <name>xuecheng-plus-parent</name>
     <description>xuecheng-plus-parent</description>
     <packaging>pom</packaging>
+    <modules>
+        <module>../xuecheng-plus-auth</module>
+        <module>../xuecheng-plus-base</module>
+        <module>../xuecheng-plus-content</module>
+        <module>../xuecheng-plus-gateway</module>
+        <module>../xuecheng-plus-generator</module>
+        <module>../xuecheng-plus-media</module>
+        <module>../xuecheng-plus-message-sdk</module>
+        <module>../xuecheng-plus-search</module>
+        <module>../xuecheng-plus-system</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>

@@ -1,7 +1,12 @@
 package com.shf.xuecheng.content.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.shf.xuecheng.base.exception.CommonError;
 import com.shf.xuecheng.base.exception.XueChengPlusException;
+import com.shf.xuecheng.content.config.MultipartSupportConfig;
+import com.shf.xuecheng.content.feignclient.MediaServiceClient;
+import com.shf.xuecheng.content.feignclient.SearchServiceClient;
+import com.shf.xuecheng.content.feignclient.model.CourseIndex;
 import com.shf.xuecheng.content.mapper.CourseBaseMapper;
 import com.shf.xuecheng.content.mapper.CourseMarketMapper;
 import com.shf.xuecheng.content.mapper.CoursePublishMapper;
@@ -16,16 +21,31 @@ import com.shf.xuecheng.content.model.po.CoursePublishPre;
 import com.shf.xuecheng.content.service.CourseBaseInfoService;
 import com.shf.xuecheng.content.service.CoursePublishService;
 import com.shf.xuecheng.content.service.TeachplanService;
+import com.shf.xuecheng.content.service.jobhandler.CoursePublishTask;
+import com.shf.xuecheng.messagesdk.model.po.MqMessage;
+import com.shf.xuecheng.messagesdk.service.MqMessageService;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
+@Slf4j
 public class CoursePublishServiceImpl implements CoursePublishService {
 
     @Autowired
@@ -45,6 +65,15 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 
     @Autowired
     private CoursePublishPreMapper coursePublishPreMapper;
+
+    @Autowired
+    private MqMessageService mqMessageService;
+
+    @Autowired
+    private MediaServiceClient mediaServiceClient;
+
+    @Autowired
+    private SearchServiceClient searchServiceClient;
 
     /**
      * 获取课程预览信息
@@ -185,7 +214,15 @@ public class CoursePublishServiceImpl implements CoursePublishService {
      * @param courseId
      */
     public void saveCoursePublishMessage(Long courseId) {
-
+        MqMessage mqMessage = mqMessageService.addMessage(
+                CoursePublishTask.MESSAGE_TYPE,
+                String.valueOf(courseId),
+                null,
+                null
+        );
+        if (mqMessage == null) {
+            XueChengPlusException.cast(CommonError.UNKOWN_ERROR);
+        }
     }
 
     /**
@@ -214,5 +251,91 @@ public class CoursePublishServiceImpl implements CoursePublishService {
         CourseBase courseBase = courseBaseMapper.selectById(courseId);
         courseBase.setStatus("203002");
         courseBaseMapper.updateById(courseBase);
+    }
+
+    /**
+     * 课程静态化
+     * @param courseId  课程id
+     * @return
+     */
+    @Override
+    public File generateCourseHtml(Long courseId) {
+        //静态化文件
+        File htmlFile  = null;
+
+        try {
+            //配置freemarker
+            Configuration configuration = new Configuration(Configuration.getVersion());
+
+            //加载模板
+            //选指定模板路径,classpath下templates下
+            //得到classpath路径
+            String classpath = this.getClass().getResource("/").getPath();
+            configuration.setDirectoryForTemplateLoading(new File(classpath + "/templates/"));
+            //设置字符编码
+            configuration.setDefaultEncoding("utf-8");
+
+            //指定模板文件名称
+            Template template = configuration.getTemplate("course_template.ftl");
+
+            //准备数据
+            CoursePreviewDto coursePreviewInfo = this.getCoursePreviewInfo(courseId);
+
+            Map<String, Object> map = new HashMap<>();
+            map.put("model", coursePreviewInfo);
+
+            //静态化
+            //参数1：模板，参数2：数据模型
+            String content = FreeMarkerTemplateUtils.processTemplateIntoString(template, map);
+//            System.out.println(content);
+            //将静态化内容输出到文件中
+            InputStream inputStream = IOUtils.toInputStream(content);
+            //创建静态化文件
+            htmlFile = File.createTempFile("course",".html");
+            log.debug("课程静态化，生成静态文件:{}",htmlFile.getAbsolutePath());
+            //输出流
+            FileOutputStream outputStream = new FileOutputStream(htmlFile);
+            IOUtils.copy(inputStream, outputStream);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return htmlFile;
+    }
+
+    /**
+     * 上传课程静态化页面
+     * @param courseId
+     * @param file  静态化文件
+     */
+    @Override
+    public void uploadCourseHtml(Long courseId, File file) {
+        MultipartFile multipartFile = MultipartSupportConfig.getMultipartFile(file);
+        String course = mediaServiceClient.uploadFile(multipartFile, "course", courseId+".html");
+        if(course == null){
+            XueChengPlusException.cast("远程调用媒资服务上传文件失败");
+        }
+    }
+
+    /**
+     * 保存课程索引
+     * @param courseId
+     * @return
+     */
+    @Override
+    public Boolean saveCourseIndex(Long courseId) {
+//        取出课程发布信息
+        CoursePublish coursePublish = coursePublishMapper.selectById(courseId);
+
+//        拷贝至课程索引对象
+        CourseIndex courseIndex = new CourseIndex();
+        BeanUtils.copyProperties(coursePublish, courseIndex);
+
+//        远程调用搜索服务API提娜佳课程信息到索引
+        Boolean add = searchServiceClient.add(courseIndex);
+        if (!add) {
+            XueChengPlusException.cast("添加索引失败");
+        }
+        return add;
     }
 }
