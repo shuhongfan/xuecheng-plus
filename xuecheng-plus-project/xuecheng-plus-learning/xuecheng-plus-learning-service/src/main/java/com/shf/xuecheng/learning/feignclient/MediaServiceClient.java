@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2022/9/20 20:29
  * @version 1.0
  */
- @FeignClient(value = "media-api",fallbackFactory = MediaServiceClientFallbackFactory.class)
- @RequestMapping("/media")
+@FeignClient(value = "media-api",fallbackFactory = MediaServiceClientFallbackFactory.class)
+@RequestMapping("/media")
 public interface MediaServiceClient {
 
  @GetMapping("/open/preview/{mediaId}")

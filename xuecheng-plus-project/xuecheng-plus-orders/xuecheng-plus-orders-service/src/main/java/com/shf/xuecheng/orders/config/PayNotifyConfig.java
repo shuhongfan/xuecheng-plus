@@ -22,6 +22,8 @@ public class PayNotifyConfig {
   //支付结果处理反馈队列
   public static final String PAYNOTIFY_REPLY_QUEUE = "paynotify_reply_queue";
 
+  //支付结果通知消息类型
+  public static final String MESSAGE_TYPE = "payresult_notify";
 
   //声明交换机
   @Bean(PAYNOTIFY_EXCHANGE_FANOUT)

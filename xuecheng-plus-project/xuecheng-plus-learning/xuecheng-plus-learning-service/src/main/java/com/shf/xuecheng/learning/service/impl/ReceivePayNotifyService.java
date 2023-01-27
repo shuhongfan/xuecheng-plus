@@ -6,6 +6,10 @@ import com.shf.xuecheng.learning.service.MyCourseTablesService;
 import com.shf.xuecheng.messagesdk.model.po.MqMessage;
 import com.shf.xuecheng.messagesdk.service.MqMessageService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.ExchangeTypes;
+import org.springframework.amqp.rabbit.annotation.Exchange;
+import org.springframework.amqp.rabbit.annotation.Queue;
+import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,12 +34,13 @@ public class ReceivePayNotifyService {
     @Autowired
     MyCourseTablesService myCourseTablesService;
 
-    //接收支付结果通知
-//    @RabbitListener(bindings = @QueueBinding(
-//            value = @Queue(value = PayNotifyConfig.CHOOSECOURSE_PAYNOTIFY_QUEUE),
-//            exchange = @Exchange(value = PayNotifyConfig.PAYNOTIFY_EXCHANGE_FANOUT, type = ExchangeTypes.FANOUT)
-//
-//    ))
+    /**
+     * 接收支付结果通知
+     */
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(value = PayNotifyConfig.CHOOSECOURSE_PAYNOTIFY_QUEUE),
+            exchange = @Exchange(value = PayNotifyConfig.PAYNOTIFY_EXCHANGE_FANOUT, type = ExchangeTypes.FANOUT)
+    ))
     @RabbitListener(queues = PayNotifyConfig.CHOOSECOURSE_PAYNOTIFY_QUEUE)
     public void receive(String message) {
         //获取消息
@@ -51,7 +56,6 @@ public class ReceivePayNotifyService {
             //向订单服务回复
             send(mqMessage);
         }
-
     }
 
     /**

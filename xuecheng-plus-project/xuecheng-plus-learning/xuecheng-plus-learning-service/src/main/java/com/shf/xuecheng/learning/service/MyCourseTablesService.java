@@ -33,8 +33,18 @@ public interface MyCourseTablesService {
     public XcCourseTablesDto getLearningStatus(String userId, Long courseId);
 
 
+    /**
+     * 添加选课
+     * @param choosecourseId
+     * @return
+     */
     public boolean saveChooseCourseStatus(String choosecourseId);
 
+    /**
+     * 我的课表
+     * @param params
+     * @return
+     */
     public PageResult<MyCourseTableItemDto> mycourestabls(MyCourseTableParams params);
 
 }

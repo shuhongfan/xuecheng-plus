@@ -50,6 +50,7 @@ public class LearningServiceImpl implements LearningService {
       if(coursepublish==null){
           XueChengPlusException.cast("课程信息不存在");
       }
+
       //校验学习资格
       //判断是否是试学课程
       List<TeachplanDto> teachplans = JSON.parseArray(coursepublish.getTeachplan(),TeachplanDto.class);
@@ -61,7 +62,6 @@ public class LearningServiceImpl implements LearningService {
 
       //如果登录
       if(StringUtils.isNotEmpty(userId)){
-
           //判断是否选课，根据选课情况判断学习资格
           XcCourseTablesDto xcCourseTablesDto = myCourseTablesService.getLearningStatus(userId, courseId);
           //学习资格状态 [{"code":"702001","desc":"正常学习"},{"code":"702002","desc":"没有选课或选课后没有支付"},{"code":"702003","desc":"已过期需要申请续期或重新支付"}]
@@ -82,8 +82,6 @@ public class LearningServiceImpl implements LearningService {
       }
 
       return RestResponse.validfail("请购买课程后继续学习");
-
-
   }
 
   //保存学习记录

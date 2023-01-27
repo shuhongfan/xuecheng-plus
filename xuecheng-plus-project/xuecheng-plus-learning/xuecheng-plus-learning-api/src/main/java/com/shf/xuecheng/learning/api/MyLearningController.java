@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyLearningController {
 
     @Autowired
-    LearningService learningService;
+    private LearningService learningService;
 
 
     @ApiOperation("获取视频")
