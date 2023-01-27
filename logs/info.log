@@ -1,0 +1,588 @@
+2023-01-27 18:58:35,159 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,159 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,204 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,204 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,211 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,211 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,211 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@media-api:192.168.1.5:63050 from beat map.
+2023-01-27 18:58:35,211 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@media-api:192.168.1.5:63050 from beat map.
+2023-01-27 18:58:35,212 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@media-api with instance: Instance{instanceId='null', ip='192.168.1.5', port=63050, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,212 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@media-api with instance: Instance{instanceId='null', ip='192.168.1.5', port=63050, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,213 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63050&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40media-api, body: {}
+2023-01-27 18:58:35,213 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63050&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40media-api, body: {}
+2023-01-27 18:58:35,218 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,218 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,218 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,218 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,226 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40orders-api&udpPort=50721&clusters=DEFAULT, body: {}
+2023-01-27 18:58:35,226 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40orders-api&udpPort=50721&clusters=DEFAULT, body: {}
+2023-01-27 18:58:35,231 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,231 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,233 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@orders-api@@DEFAULT -> [{"instanceId":"192.168.1.5#63030#DEFAULT#xuecheng-plus-project@@orders-api","ip":"192.168.1.5","port":63030,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@orders-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:35,233 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@orders-api@@DEFAULT -> [{"instanceId":"192.168.1.5#63030#DEFAULT#xuecheng-plus-project@@orders-api","ip":"192.168.1.5","port":63030,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@orders-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:35,233 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@1295c7c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@c5e69a5
+2023-01-27 18:58:35,233 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@1295c7c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@c5e69a5
+2023-01-27 18:58:35,236 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@orders-api@@DEFAULT -> []
+2023-01-27 18:58:35,236 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@orders-api@@DEFAULT -> []
+2023-01-27 18:58:35,246 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,246 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,246 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@search:192.168.1.5:63080 from beat map.
+2023-01-27 18:58:35,246 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@search:192.168.1.5:63080 from beat map.
+2023-01-27 18:58:35,247 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@search with instance: Instance{instanceId='null', ip='192.168.1.5', port=63080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,247 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@search with instance: Instance{instanceId='null', ip='192.168.1.5', port=63080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,247 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63080&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40search, body: {}
+2023-01-27 18:58:35,247 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63080&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40search, body: {}
+2023-01-27 18:58:35,250 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,250 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,251 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,251 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,252 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,252 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,253 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,253 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,256 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,256 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,256 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@checkcode:192.168.1.5:63075 from beat map.
+2023-01-27 18:58:35,256 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@checkcode:192.168.1.5:63075 from beat map.
+2023-01-27 18:58:35,256 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@checkcode with instance: Instance{instanceId='null', ip='192.168.1.5', port=63075, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,256 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@checkcode with instance: Instance{instanceId='null', ip='192.168.1.5', port=63075, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,257 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63075&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40checkcode, body: {}
+2023-01-27 18:58:35,257 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63075&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40checkcode, body: {}
+2023-01-27 18:58:35,257 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'taskScheduler'
+2023-01-27 18:58:35,257 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'taskScheduler'
+2023-01-27 18:58:35,259 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,259 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,260 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@system-service:192.168.1.5:63110 from beat map.
+2023-01-27 18:58:35,260 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@system-service:192.168.1.5:63110 from beat map.
+2023-01-27 18:58:35,260 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,260 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,260 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@system-service with instance: Instance{instanceId='null', ip='192.168.1.5', port=63110, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,260 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@system-service with instance: Instance{instanceId='null', ip='192.168.1.5', port=63110, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,261 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63110&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40system-service, body: {}
+2023-01-27 18:58:35,261 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63110&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40system-service, body: {}
+2023-01-27 18:58:35,261 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,261 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,264 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,264 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,264 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,264 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,506 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40search&udpPort=60525&clusters=DEFAULT, body: {}
+2023-01-27 18:58:35,506 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40search&udpPort=60525&clusters=DEFAULT, body: {}
+2023-01-27 18:58:35,509 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@search@@DEFAULT -> [{"instanceId":"192.168.1.5#63080#DEFAULT#xuecheng-plus-project@@search","ip":"192.168.1.5","port":63080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@search","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:35,509 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@search@@DEFAULT -> [{"instanceId":"192.168.1.5#63080#DEFAULT#xuecheng-plus-project@@search","ip":"192.168.1.5","port":63080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@search","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:35,509 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@4bdb2a93 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@628b819d
+2023-01-27 18:58:35,509 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@4bdb2a93 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@628b819d
+2023-01-27 18:58:35,510 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@search@@DEFAULT -> []
+2023-01-27 18:58:35,510 INFO [com.alibaba.nacos.client.naming.updater][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@search@@DEFAULT -> []
+2023-01-27 18:58:35,586 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40learning-api&udpPort=55341&clusters=DEFAULT, body: {}
+2023-01-27 18:58:35,586 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40learning-api&udpPort=55341&clusters=DEFAULT, body: {}
+2023-01-27 18:58:35,624 INFO [SpringContextShutdownHook][SimpleMessageListenerContainer.java:649] - Successfully waited for workers to finish.
+2023-01-27 18:58:35,624 INFO [SpringContextShutdownHook][SimpleMessageListenerContainer.java:649] - Successfully waited for workers to finish.
+2023-01-27 18:58:35,759 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:35,759 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:35,774 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:35,774 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:35,815 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,815 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-27 18:58:35,825 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,825 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:94] - De-registering from Nacos Server now...
+2023-01-27 18:58:35,825 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@learning-api:192.168.1.5:63020 from beat map.
+2023-01-27 18:58:35,825 INFO [SpringContextShutdownHook][BeatReactor.java:101] - [BEAT] removing beat: xuecheng-plus-project@@learning-api:192.168.1.5:63020 from beat map.
+2023-01-27 18:58:35,825 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@learning-api with instance: Instance{instanceId='null', ip='192.168.1.5', port=63020, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,825 INFO [SpringContextShutdownHook][NamingProxy.java:260] - [DEREGISTER-SERVICE] dev148 deregistering service xuecheng-plus-project@@learning-api with instance: Instance{instanceId='null', ip='192.168.1.5', port=63020, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-27 18:58:35,826 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63020&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40learning-api, body: {}
+2023-01-27 18:58:35,826 DEBUG [SpringContextShutdownHook][NacosRestTemplate.java:476] - HTTP method: DELETE, url: http://192.168.101.65:8848/nacos/v1/ns/instance?app=unknown&namespaceId=dev148&port=63020&clusterName=DEFAULT&ip=192.168.1.5&ephemeral=true&serviceName=xuecheng-plus-project%40%40learning-api, body: {}
+2023-01-27 18:58:35,827 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,827 INFO [SpringContextShutdownHook][NacosServiceRegistry.java:114] - De-registration finished.
+2023-01-27 18:58:35,829 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,829 INFO [SpringContextShutdownHook][BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-27 18:58:35,838 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:35,838 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:36,040 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@orders-api\",\"name\":\"xuecheng-plus-project@@orders-api\",\"cacheMillis\":10000,\"lastRefTime\":1674817118611,\"checksum\":\"2b9626c76cf12aed936763ea6c671c15\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926440211308} from /192.168.1.5
+2023-01-27 18:58:36,040 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@orders-api\",\"name\":\"xuecheng-plus-project@@orders-api\",\"cacheMillis\":10000,\"lastRefTime\":1674817118611,\"checksum\":\"2b9626c76cf12aed936763ea6c671c15\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926440211308} from /192.168.1.5
+2023-01-27 18:58:36,043 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:36,043 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:36,077 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@auth-service\",\"name\":\"xuecheng-plus-project@@auth-service\",\"cacheMillis\":10000,\"lastRefTime\":1674817118649,\"checksum\":\"23a3d5a8c13d5333b31ac12f10216a8d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926478048814} from /192.168.1.5
+2023-01-27 18:58:36,077 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@auth-service\",\"name\":\"xuecheng-plus-project@@auth-service\",\"cacheMillis\":10000,\"lastRefTime\":1674817118649,\"checksum\":\"23a3d5a8c13d5333b31ac12f10216a8d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926478048814} from /192.168.1.5
+2023-01-27 18:58:36,079 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@auth-service@@DEFAULT -> [{"instanceId":"192.168.1.5#63070#DEFAULT#xuecheng-plus-project@@auth-service","ip":"192.168.1.5","port":63070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:36,079 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@auth-service@@DEFAULT -> [{"instanceId":"192.168.1.5#63070#DEFAULT#xuecheng-plus-project@@auth-service","ip":"192.168.1.5","port":63070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:36,080 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@2545cef5 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3e753289
+2023-01-27 18:58:36,080 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@2545cef5 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@3e753289
+2023-01-27 18:58:36,081 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@auth-service@@DEFAULT -> []
+2023-01-27 18:58:36,081 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@auth-service@@DEFAULT -> []
+2023-01-27 18:58:36,185 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:36,185 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:36,201 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:36,201 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:36,202 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:36,202 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:36,219 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1674817118791,\"checksum\":\"e581954b7428757802b5a9598d3a399d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926619824136} from /192.168.1.5
+2023-01-27 18:58:36,219 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@media-api\",\"name\":\"xuecheng-plus-project@@media-api\",\"cacheMillis\":10000,\"lastRefTime\":1674817118791,\"checksum\":\"e581954b7428757802b5a9598d3a399d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926619824136} from /192.168.1.5
+2023-01-27 18:58:36,221 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.1.5#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.1.5","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-27 18:58:36,221 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@media-api@@DEFAULT -> [{"instanceId":"192.168.1.5#63050#DEFAULT#xuecheng-plus-project@@media-api","ip":"192.168.1.5","port":63050,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@media-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-27 18:58:36,221 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5ee790e4 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@774f2992
+2023-01-27 18:58:36,221 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@5ee790e4 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@774f2992
+2023-01-27 18:58:36,223 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@media-api@@DEFAULT -> []
+2023-01-27 18:58:36,223 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@media-api@@DEFAULT -> []
+2023-01-27 18:58:36,252 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@search\",\"name\":\"xuecheng-plus-project@@search\",\"cacheMillis\":10000,\"lastRefTime\":1674817118824,\"checksum\":\"d6a379d68023ea89918f1b374523d171\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926652534541} from /192.168.1.5
+2023-01-27 18:58:36,252 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@search\",\"name\":\"xuecheng-plus-project@@search\",\"cacheMillis\":10000,\"lastRefTime\":1674817118824,\"checksum\":\"d6a379d68023ea89918f1b374523d171\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926652534541} from /192.168.1.5
+2023-01-27 18:58:36,261 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@checkcode\",\"name\":\"xuecheng-plus-project@@checkcode\",\"cacheMillis\":10000,\"lastRefTime\":1674817118833,\"checksum\":\"1ea0390f3927c0cbf21ea6e3de9b8d83\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926661796142} from /192.168.1.5
+2023-01-27 18:58:36,261 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@checkcode\",\"name\":\"xuecheng-plus-project@@checkcode\",\"cacheMillis\":10000,\"lastRefTime\":1674817118833,\"checksum\":\"1ea0390f3927c0cbf21ea6e3de9b8d83\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926661796142} from /192.168.1.5
+2023-01-27 18:58:36,261 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@checkcode\",\"name\":\"xuecheng-plus-project@@checkcode\",\"cacheMillis\":10000,\"lastRefTime\":1674817118833,\"checksum\":\"1ea0390f3927c0cbf21ea6e3de9b8d83\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926661796142} from /192.168.1.5
+2023-01-27 18:58:36,261 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@checkcode\",\"name\":\"xuecheng-plus-project@@checkcode\",\"cacheMillis\":10000,\"lastRefTime\":1674817118833,\"checksum\":\"1ea0390f3927c0cbf21ea6e3de9b8d83\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926661796142} from /192.168.1.5
+2023-01-27 18:58:36,261 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@checkcode -> [{"instanceId":"192.168.1.5#63075#DEFAULT#xuecheng-plus-project@@checkcode","ip":"192.168.1.5","port":63075,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@checkcode","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:36,261 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@checkcode -> [{"instanceId":"192.168.1.5#63075#DEFAULT#xuecheng-plus-project@@checkcode","ip":"192.168.1.5","port":63075,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@checkcode","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:36,263 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@checkcode -> []
+2023-01-27 18:58:36,263 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@checkcode -> []
+2023-01-27 18:58:36,263 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@checkcode@@DEFAULT -> [{"instanceId":"192.168.1.5#63075#DEFAULT#xuecheng-plus-project@@checkcode","ip":"192.168.1.5","port":63075,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@checkcode","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-01-27 18:58:36,263 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@checkcode@@DEFAULT -> [{"instanceId":"192.168.1.5#63075#DEFAULT#xuecheng-plus-project@@checkcode","ip":"192.168.1.5","port":63075,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@checkcode","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-01-27 18:58:36,264 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7287f76b will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6192a5d5
+2023-01-27 18:58:36,264 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7287f76b will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@6192a5d5
+2023-01-27 18:58:36,265 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@system-service\",\"name\":\"xuecheng-plus-project@@system-service\",\"cacheMillis\":10000,\"lastRefTime\":1674817118837,\"checksum\":\"35d0be52d34acf9fe374a4dc6219ae17\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926665885643} from /192.168.1.5
+2023-01-27 18:58:36,265 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@system-service\",\"name\":\"xuecheng-plus-project@@system-service\",\"cacheMillis\":10000,\"lastRefTime\":1674817118837,\"checksum\":\"35d0be52d34acf9fe374a4dc6219ae17\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61926665885643} from /192.168.1.5
+2023-01-27 18:58:36,267 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@system-service@@DEFAULT -> [{"instanceId":"192.168.1.5#63110#DEFAULT#xuecheng-plus-project@@system-service","ip":"192.168.1.5","port":63110,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:36,267 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@system-service@@DEFAULT -> [{"instanceId":"192.168.1.5#63110#DEFAULT#xuecheng-plus-project@@system-service","ip":"192.168.1.5","port":63110,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@system-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-27 18:58:36,267 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6fac8788 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@70b48eb3
+2023-01-27 18:58:36,267 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@6fac8788 will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@70b48eb3
+2023-01-27 18:58:36,269 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@checkcode@@DEFAULT -> []
+2023-01-27 18:58:36,269 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@checkcode@@DEFAULT -> []
+2023-01-27 18:58:36,270 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@system-service@@DEFAULT -> []
+2023-01-27 18:58:36,270 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@system-service@@DEFAULT -> []
+2023-01-27 18:58:36,388 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-01-27 18:58:36,388 DEBUG [com.alibaba.nacos.client.naming.updater][NamingProxy.java:195] - server list provided by user: [192.168.101.65:8848]
+2023-01-27 18:58:36,797 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:36,797 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:36,797 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:36,797 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:36,912 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@learning-api\",\"name\":\"xuecheng-plus-project@@learning-api\",\"cacheMillis\":10000,\"lastRefTime\":1674817119484,\"checksum\":\"c49b4bb236931866b68113a7eab374af\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61927311425743} from /192.168.1.5
+2023-01-27 18:58:36,912 INFO [com.alibaba.nacos.naming.push.receiver][PushReceiver.java:97] - received push data: {"type":"dom","data":"{\"dom\":\"xuecheng-plus-project@@learning-api\",\"name\":\"xuecheng-plus-project@@learning-api\",\"cacheMillis\":10000,\"lastRefTime\":1674817119484,\"checksum\":\"c49b4bb236931866b68113a7eab374af\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":61927311425743} from /192.168.1.5
+2023-01-27 18:58:36,914 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@learning-api@@DEFAULT -> [{"instanceId":"192.168.1.5#63020#DEFAULT#xuecheng-plus-project@@learning-api","ip":"192.168.1.5","port":63020,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@learning-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-27 18:58:36,914 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:238] - removed ips(1) service: xuecheng-plus-project@@learning-api@@DEFAULT -> [{"instanceId":"192.168.1.5#63020#DEFAULT#xuecheng-plus-project@@learning-api","ip":"192.168.1.5","port":63020,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"xuecheng-plus-project@@learning-api","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-27 18:58:36,914 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7f3b200c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2a631049
+2023-01-27 18:58:36,914 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent][DefaultPublisher.java:193] - [NotifyCenter] the com.alibaba.nacos.client.naming.event.InstancesChangeEvent@7f3b200c will received by com.alibaba.nacos.client.naming.event.InstancesChangeNotifier@2a631049
+2023-01-27 18:58:36,916 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@learning-api@@DEFAULT -> []
+2023-01-27 18:58:36,916 INFO [com.alibaba.nacos.naming.push.receiver][HostReactor.java:271] - current ips:(0) service: xuecheng-plus-project@@learning-api@@DEFAULT -> []
+2023-01-27 18:58:36,943 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-servicexuecheng-plus-projectdev148system-service-dev.yamlxuecheng-plus-project7c166a3388dc2a93e3e6a9d2444175bcdev148swagger-dev.yamlxuecheng-plus-common45470841da1bd21d077736868beed9b8dev148logging-dev.yamlxuecheng-plus-commonde144bdd375e2f9051ab16669662f115dev148system-service.yamlxuecheng-plus-projectdev148, tenant=dev148}
+2023-01-27 18:58:36,943 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=system-servicexuecheng-plus-projectdev148system-service-dev.yamlxuecheng-plus-project7c166a3388dc2a93e3e6a9d2444175bcdev148swagger-dev.yamlxuecheng-plus-common45470841da1bd21d077736868beed9b8dev148logging-dev.yamlxuecheng-plus-commonde144bdd375e2f9051ab16669662f115dev148system-service.yamlxuecheng-plus-projectdev148, tenant=dev148}
+2023-01-27 18:58:36,943 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@30140971]
+2023-01-27 18:58:36,943 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@30140971]
+2023-01-27 18:58:37,249 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40orders-api&udpPort=50721&clusters=DEFAULT, body: {}
+2023-01-27 18:58:37,249 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40orders-api&udpPort=50721&clusters=DEFAULT, body: {}
+2023-01-27 18:58:37,253 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:37,253 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:37,302 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=swagger-dev.yamlxuecheng-plus-common45470841da1bd21d077736868beed9b8dev148checkcode.yamlxuecheng-plus-projectdev148logging-dev.yamlxuecheng-plus-commonde144bdd375e2f9051ab16669662f115dev148checkcodexuecheng-plus-projectdev148checkcode-dev.yamlxuecheng-plus-project6033e8fd9f084a4e0019db05d6dc061edev148, tenant=dev148}
+2023-01-27 18:58:37,302 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=swagger-dev.yamlxuecheng-plus-common45470841da1bd21d077736868beed9b8dev148checkcode.yamlxuecheng-plus-projectdev148logging-dev.yamlxuecheng-plus-commonde144bdd375e2f9051ab16669662f115dev148checkcodexuecheng-plus-projectdev148checkcode-dev.yamlxuecheng-plus-project6033e8fd9f084a4e0019db05d6dc061edev148, tenant=dev148}
+2023-01-27 18:58:37,302 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@1934ab51]
+2023-01-27 18:58:37,302 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@1934ab51]
+2023-01-27 18:58:37,517 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40search&udpPort=60525&clusters=DEFAULT, body: {}
+2023-01-27 18:58:37,517 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40search&udpPort=60525&clusters=DEFAULT, body: {}
+2023-01-27 18:58:37,753 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:37,754 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:37,753 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:37,754 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:37,801 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:37,801 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:37,801 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:37,801 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,280 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,857 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:38,857 INFO [SpringContextShutdownHook][BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-27 18:58:38,857 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,857 INFO [SpringContextShutdownHook][HostReactor.java:413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-27 18:58:38,920 DEBUG [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:51] - >>>>>>>>>>> xxl-job registry success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='payresultnotify-job', registryValue='http://192.168.1.5:8989/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-01-27 18:58:38,920 DEBUG [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:51] - >>>>>>>>>>> xxl-job registry success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='payresultnotify-job', registryValue='http://192.168.1.5:8989/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-01-27 18:58:39,028 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:39,028 DEBUG [HikariPool-1 housekeeper][HikariPool.java:421] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:39,028 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2023-01-27 18:58:39,028 DEBUG [HikariPool-1 housekeeper][HikariPool.java:517] - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2023-01-27 18:58:39,311 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40checkcode&udpPort=59097&clusters=, body: {}
+2023-01-27 18:58:39,311 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40checkcode&udpPort=59097&clusters=, body: {}
+2023-01-27 18:58:39,357 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:39,357 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:39,357 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:39,357 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:39,466 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40system-service&udpPort=60526&clusters=DEFAULT, body: {}
+2023-01-27 18:58:39,466 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40system-service&udpPort=60526&clusters=DEFAULT, body: {}
+2023-01-27 18:58:39,471 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:39,471 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:39,813 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:39,813 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:40,266 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:40,266 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:40,266 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:40,266 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:40,266 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:40,267 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:40,267 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:40,267 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:40,267 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:40,267 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:40,267 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:40,268 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:40,268 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:40,272 INFO [Thread-29][EmbedServer.java:91] - >>>>>>>>>>> xxl-job remoting server stop.
+2023-01-27 18:58:40,272 INFO [Thread-29][EmbedServer.java:91] - >>>>>>>>>>> xxl-job remoting server stop.
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-4][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-4
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-17][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-17
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-12][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-12
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-6][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-6
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-23][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-23
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-5][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-5
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-27][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-27
+2023-01-27 18:58:40,279 DEBUG [nioEventLoopGroup-3-15][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-15
+2023-01-27 18:58:40,277 DEBUG [nioEventLoopGroup-3-7][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-7
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-32][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-32
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-20][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-20
+2023-01-27 18:58:40,277 DEBUG [nioEventLoopGroup-3-21][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-21
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-30][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-30
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-14][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-14
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-3][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-3
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-30][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-30
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-22][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-22
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-29][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-29
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-16][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-16
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-29][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-29
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-13][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-13
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-24][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-24
+2023-01-27 18:58:40,277 DEBUG [nioEventLoopGroup-3-8][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-8
+2023-01-27 18:58:40,279 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:87] - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='payresultnotify-job', registryValue='http://192.168.1.5:8989/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-01-27 18:58:40,279 DEBUG [nioEventLoopGroup-3-11][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-11
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-25][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-25
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-10][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-10
+2023-01-27 18:58:40,283 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:105] - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-1][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-1
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-19][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-19
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-18][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-18
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-31][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-31
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-2][PoolThreadCache.java:224] - Freed 2 thread-local buffer(s) from thread: nioEventLoopGroup-3-2
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-26][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-26
+2023-01-27 18:58:40,278 DEBUG [nioEventLoopGroup-3-9][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-9
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-32][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-32
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-20][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-20
+2023-01-27 18:58:40,283 INFO [SpringContextShutdownHook][EmbedServer.java:117] - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-25][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-25
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-4][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-4
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-27][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-27
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-12][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-12
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-17][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-17
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-2][PoolThreadCache.java:224] - Freed 2 thread-local buffer(s) from thread: nioEventLoopGroup-3-2
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-10][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-10
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-1][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-1
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-26][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-26
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-31][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-31
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-6][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-6
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-19][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-19
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-16][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-16
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-22][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-22
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-23][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-23
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-5][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-5
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-3][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-3
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-24][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-24
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-14][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-14
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-13][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-13
+2023-01-27 18:58:40,277 DEBUG [nioEventLoopGroup-3-7][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-7
+2023-01-27 18:58:40,277 DEBUG [nioEventLoopGroup-3-8][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-8
+2023-01-27 18:58:40,277 DEBUG [nioEventLoopGroup-3-21][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-21
+2023-01-27 18:58:40,276 DEBUG [nioEventLoopGroup-3-18][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-18
+2023-01-27 18:58:40,278 DEBUG [nioEventLoopGroup-3-9][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-9
+2023-01-27 18:58:40,279 DEBUG [nioEventLoopGroup-3-15][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-15
+2023-01-27 18:58:40,279 DEBUG [nioEventLoopGroup-3-11][PoolThreadCache.java:224] - Freed 3 thread-local buffer(s) from thread: nioEventLoopGroup-3-11
+2023-01-27 18:58:40,279 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:87] - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='payresultnotify-job', registryValue='http://192.168.1.5:8989/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-01-27 18:58:40,283 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:105] - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-01-27 18:58:40,283 INFO [SpringContextShutdownHook][EmbedServer.java:117] - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-01-27 18:58:40,284 INFO [xxl-job, executor JobLogFileCleanThread][JobLogFileCleanThread.java:99] - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-01-27 18:58:40,284 INFO [xxl-job, executor JobLogFileCleanThread][JobLogFileCleanThread.java:99] - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-01-27 18:58:40,285 INFO [xxl-job, executor TriggerCallbackThread][TriggerCallbackThread.java:98] - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-01-27 18:58:40,285 INFO [xxl-job, executor TriggerCallbackThread][TriggerCallbackThread.java:98] - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-01-27 18:58:40,285 INFO [Thread-28][TriggerCallbackThread.java:128] - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-01-27 18:58:40,285 INFO [Thread-28][TriggerCallbackThread.java:128] - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-01-27 18:58:40,287 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-01-27 18:58:40,287 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-01-27 18:58:40,287 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:40,287 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5572fcb1: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5572fcb1: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1098091c: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1098091c: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51a50327: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51a50327: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@60be908a: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@60be908a: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@318afc68: (connection evicted)
+2023-01-27 18:58:40,288 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@318afc68: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@140e23a9: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@140e23a9: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@37fd: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@37fd: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@413d3dc6: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@413d3dc6: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@751a8e27: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@751a8e27: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@173a5fda: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@173a5fda: (connection evicted)
+2023-01-27 18:58:40,289 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-01-27 18:58:40,289 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-01-27 18:58:40,290 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-01-27 18:58:40,290 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-01-27 18:58:40,467 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40checkcode&udpPort=60527&clusters=DEFAULT, body: {}
+2023-01-27 18:58:40,467 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev148&clientIP=192.168.1.5&serviceName=xuecheng-plus-project%40%40checkcode&udpPort=60527&clusters=DEFAULT, body: {}
+2023-01-27 18:58:40,469 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:40,469 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:40,764 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:40,764 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:40,781 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:40,781 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:40,828 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:40,828 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:40,843 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:40,843 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:41,186 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:41,186 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-01-27 18:58:41,297 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:41,297 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:41,504 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=auth-service-dev.yamlxuecheng-plus-project564c5cbcc2ad48ce60aa794edd70f934dev148swagger-dev.yamlxuecheng-plus-common45470841da1bd21d077736868beed9b8dev148auth-servicexuecheng-plus-projectdev148logging-dev.yamlxuecheng-plus-commonde144bdd375e2f9051ab16669662f115dev148auth-service.yamlxuecheng-plus-projectdev148, tenant=dev148}
+2023-01-27 18:58:41,504 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:476] - HTTP method: POST, url: http://192.168.101.65:8848/nacos/v1/cs/configs/listener, body: {Listening-Configs=auth-service-dev.yamlxuecheng-plus-project564c5cbcc2ad48ce60aa794edd70f934dev148swagger-dev.yamlxuecheng-plus-common45470841da1bd21d077736868beed9b8dev148auth-servicexuecheng-plus-projectdev148logging-dev.yamlxuecheng-plus-commonde144bdd375e2f9051ab16669662f115dev148auth-service.yamlxuecheng-plus-projectdev148, tenant=dev148}
+2023-01-27 18:58:41,504 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@f972d5b]
+2023-01-27 18:58:41,504 DEBUG [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.101.65_8848-dev148][NacosRestTemplate.java:494] - Execute via interceptors :[com.alibaba.nacos.client.config.impl.ConfigHttpClientManager$LimiterHttpClientRequestInterceptor@f972d5b]
+2023-01-27 18:58:41,880 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:41,880 INFO [SpringContextShutdownHook][PushReceiver.java:132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-27 18:58:42,258 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,258 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,492 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:42,492 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:42,492 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:42,492 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:42,493 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:42,493 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:42,493 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:42,493 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:42,493 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:42,493 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:42,493 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:42,493 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:42,493 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:42,493 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:42,494 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:42,494 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:42,494 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:42,494 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:42,494 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:42,494 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:42,494 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,494 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,497 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:42,497 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:42,650 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,650 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,651 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:42,651 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:42,839 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:42,839 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:42,839 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:42,839 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:42,840 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:42,840 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:42,840 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:42,840 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:42,840 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:42,841 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:42,841 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:42,841 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:42,841 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:42,841 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,841 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:42,844 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:42,844 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:42,848 INFO [Thread-26][EmbedServer.java:91] - >>>>>>>>>>> xxl-job remoting server stop.
+2023-01-27 18:58:42,848 INFO [Thread-26][EmbedServer.java:91] - >>>>>>>>>>> xxl-job remoting server stop.
+2023-01-27 18:58:42,851 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:87] - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='media-process-service', registryValue='http://192.168.1.5:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-01-27 18:58:42,851 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:87] - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='media-process-service', registryValue='http://192.168.1.5:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-01-27 18:58:42,851 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:105] - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-01-27 18:58:42,851 INFO [xxl-job, executor ExecutorRegistryThread][ExecutorRegistryThread.java:105] - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-01-27 18:58:42,852 INFO [SpringContextShutdownHook][EmbedServer.java:117] - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-01-27 18:58:42,852 INFO [SpringContextShutdownHook][EmbedServer.java:117] - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-01-27 18:58:42,853 INFO [xxl-job, executor JobLogFileCleanThread][JobLogFileCleanThread.java:99] - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-01-27 18:58:42,853 INFO [xxl-job, executor JobLogFileCleanThread][JobLogFileCleanThread.java:99] - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-01-27 18:58:42,853 INFO [xxl-job, executor TriggerCallbackThread][TriggerCallbackThread.java:98] - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-01-27 18:58:42,853 INFO [xxl-job, executor TriggerCallbackThread][TriggerCallbackThread.java:98] - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-01-27 18:58:42,853 INFO [Thread-25][TriggerCallbackThread.java:128] - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-01-27 18:58:42,853 INFO [Thread-25][TriggerCallbackThread.java:128] - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:43,498 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:43,498 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:43,498 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:43,498 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:43,498 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:43,499 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:43,499 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:43,499 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:43,499 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:43,499 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:43,499 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:43,499 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:43,499 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:43,500 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:43,500 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:43,841 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:43,841 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:43,842 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:43,842 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:43,842 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:43,842 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:43,842 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:43,843 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:43,843 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:43,843 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:43,843 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:43,843 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:43,843 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:43,843 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:43,843 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:43,844 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:43,844 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:43,863 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-01-27 18:58:43,863 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-01-27 18:58:43,864 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:43,864 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:43,864 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@10bec73c: (connection evicted)
+2023-01-27 18:58:43,864 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@10bec73c: (connection evicted)
+2023-01-27 18:58:43,865 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2b83f8ef: (connection evicted)
+2023-01-27 18:58:43,865 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2b83f8ef: (connection evicted)
+2023-01-27 18:58:43,865 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6abef2d4: (connection evicted)
+2023-01-27 18:58:43,865 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6abef2d4: (connection evicted)
+2023-01-27 18:58:43,865 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b1ed99c: (connection evicted)
+2023-01-27 18:58:43,865 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b1ed99c: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@a910d9b: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@a910d9b: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6f66ebec: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6f66ebec: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@797053ba: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@797053ba: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c83f9e8: (connection evicted)
+2023-01-27 18:58:43,866 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c83f9e8: (connection evicted)
+2023-01-27 18:58:43,867 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2dbef3d3: (connection evicted)
+2023-01-27 18:58:43,867 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2dbef3d3: (connection evicted)
+2023-01-27 18:58:43,867 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@f294b97: (connection evicted)
+2023-01-27 18:58:43,867 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@f294b97: (connection evicted)
+2023-01-27 18:58:43,867 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-01-27 18:58:43,867 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-01-27 18:58:43,867 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-01-27 18:58:43,867 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-01-27 18:58:44,314 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:44,314 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:44,315 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:44,316 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:44,316 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:44,316 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:44,316 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:44,316 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:44,316 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:44,316 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:44,316 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:44,316 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:44,316 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:44,317 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:44,317 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:44,317 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:44,317 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:44,892 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:44,892 INFO [SpringContextShutdownHook][PushReceiver.java:136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-27 18:58:44,892 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:44,892 INFO [SpringContextShutdownHook][FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-27 18:58:44,892 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:44,892 INFO [SpringContextShutdownHook][FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][HostReactor.java:418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-27 18:58:44,893 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:44,893 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-27 18:58:44,893 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:44,893 WARN [SpringContextShutdownHook][NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][CredentialService.java:98] - [null] CredentialService is freed
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:44,893 INFO [SpringContextShutdownHook][NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-27 18:58:44,894 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:44,894 WARN [SpringContextShutdownHook][DisposableBeanAdapter.java:349] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-27 18:58:44,894 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:44,894 INFO [SpringContextShutdownHook][ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-27 18:58:44,910 INFO [SpringContextShutdownHook][AbstractMessageListenerContainer.java:1260] - Shutdown ignored - container is not active already
+2023-01-27 18:58:44,910 INFO [SpringContextShutdownHook][AbstractMessageListenerContainer.java:1260] - Shutdown ignored - container is not active already
+2023-01-27 18:58:44,915 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-01-27 18:58:44,915 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-01-27 18:58:44,915 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:44,915 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-01-27 18:58:44,916 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1081c54a: (connection evicted)
+2023-01-27 18:58:44,916 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1081c54a: (connection evicted)
+2023-01-27 18:58:44,917 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51bccf71: (connection evicted)
+2023-01-27 18:58:44,917 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51bccf71: (connection evicted)
+2023-01-27 18:58:44,917 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b27eae7: (connection evicted)
+2023-01-27 18:58:44,917 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b27eae7: (connection evicted)
+2023-01-27 18:58:44,918 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@524d18ed: (connection evicted)
+2023-01-27 18:58:44,918 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@524d18ed: (connection evicted)
+2023-01-27 18:58:44,918 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@49b02be2: (connection evicted)
+2023-01-27 18:58:44,918 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@49b02be2: (connection evicted)
+2023-01-27 18:58:44,918 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@52219a44: (connection evicted)
+2023-01-27 18:58:44,918 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@52219a44: (connection evicted)
+2023-01-27 18:58:44,919 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2914736a: (connection evicted)
+2023-01-27 18:58:44,919 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2914736a: (connection evicted)
+2023-01-27 18:58:44,919 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@57ad14c3: (connection evicted)
+2023-01-27 18:58:44,919 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@57ad14c3: (connection evicted)
+2023-01-27 18:58:44,919 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@43b23a0a: (connection evicted)
+2023-01-27 18:58:44,919 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@43b23a0a: (connection evicted)
+2023-01-27 18:58:44,920 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19f54253: (connection evicted)
+2023-01-27 18:58:44,920 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19f54253: (connection evicted)
+2023-01-27 18:58:44,920 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-01-27 18:58:44,920 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-01-27 18:58:44,920 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-01-27 18:58:44,920 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
