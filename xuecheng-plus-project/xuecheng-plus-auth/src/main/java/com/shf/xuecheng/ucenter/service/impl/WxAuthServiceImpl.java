@@ -37,7 +37,7 @@ public class WxAuthServiceImpl implements AuthService {
     @Autowired
     private WxAuthServiceImpl currentProxy;
 
-    @Value("${weixin,appid}")
+    @Value("${weixin.appid}")
     String appid;
 
     @Value("${weixin.secret}")

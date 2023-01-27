@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xuecheng.learning.mapper.XcLearnRecordMapper">
+<mapper namespace="mapper.learning.com.shf.xuecheng.XcLearnRecordMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.xuecheng.learning.model.po.XcLearnRecord">
+    <resultMap id="BaseResultMap" type="po.model.learning.com.shf.xuecheng.XcLearnRecord">
         <id column="id" property="id" />
         <result column="course_id" property="courseId" />
         <result column="course_name" property="courseName" />

@@ -2,9 +2,11 @@ package com.shf.xuecheng.ucenter.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.shf.xuecheng.ucenter.mapper.XcMenuMapper;
 import com.shf.xuecheng.ucenter.mapper.XcUserMapper;
 import com.shf.xuecheng.ucenter.model.dto.AuthParamsDto;
 import com.shf.xuecheng.ucenter.model.dto.XcUserExt;
+import com.shf.xuecheng.ucenter.model.po.XcMenu;
 import com.shf.xuecheng.ucenter.model.po.XcUser;
 import com.shf.xuecheng.ucenter.service.AuthService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,12 +17,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Slf4j
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private XcUserMapper xcUserMapper;
+
+    @Autowired
+    private XcMenuMapper xcMenuMapper;
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -58,10 +66,23 @@ public class UserDetailsServiceImpl implements UserDetailsService {
      * @date 2022/9/29 12:19
      */
     public UserDetails getUserPrincipal(XcUserExt user) {
+//        调用mapper查询数据库得到用户的权限
+        List<XcMenu> xcMenus = xcMenuMapper.selectPermissionByUserId(user.getId());
+
         //用户权限,如果不加报Cannot pass a null GrantedAuthority collection
-        String[] authorities = {"p1"};
-        String password = user.getPassword();
+        String[] authorities = {"test"};
+
+        ArrayList<String> authoritieList = new ArrayList<>();
+        xcMenus.forEach(menu->{
+            authoritieList.add(menu.getCode());
+        });
+
+        if (authoritieList.size() > 0) {
+            authorities = authoritieList.toArray(new String[0]);
+        }
+
         //为了安全在令牌中不放密码
+        String password = user.getPassword();
         user.setPassword(null);
         //将user对象转json
         String userString = JSON.toJSONString(user);

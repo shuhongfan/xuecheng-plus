@@ -12,6 +12,10 @@ import java.time.LocalDateTime;
 @Slf4j
 public class SecurityUtil {
 
+    /**
+     * 取出当前用户身份
+     * @return
+     */
     public static XcUser getUser() {
 //        拿到JWT中的用户身份
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

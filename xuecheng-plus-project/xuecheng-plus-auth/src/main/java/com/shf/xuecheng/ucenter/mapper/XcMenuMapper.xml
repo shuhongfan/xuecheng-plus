@@ -23,4 +23,14 @@
         id, code, p_id, menu_name, url, is_menu, level, sort, status, icon, create_time, update_time
     </sql>
 
+<!--    根据用户id获取用户权限-->
+    <select id="selectPermissionByUserId" resultType="com.shf.xuecheng.ucenter.model.po.XcMenu">
+        select *
+        from xc_menu
+        where id in (
+            select menu_id from xc_permission where role_id in(
+                select role_id from xc_user_role where user_id=#{userId}
+            )
+        );
+    </select>
 </mapper>
